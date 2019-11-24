@@ -519,6 +519,7 @@ def makeDark(name, maxPixel, value, matrix):
 def makeDir(name):
     if not os.path.exists(name):
         os.mkdir(name)
-        print("A new directory was created for the ", name, " Library")
+        print("A new directory was created for: ", name)
     else:
-        print("DIrectiory ", name, "already exsists, no need to creat")
+        print("Directiory: ", name, ", already exsists",
+              "no need to create another")
