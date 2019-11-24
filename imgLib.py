@@ -1,9 +1,9 @@
 import numpy as np
 import re
 import math
+import os
 
 # imageLibrary - Sci2000 - T01 - Andrew Marinic - 7675509
-
 
 
 # this function makes a circle matrix
@@ -514,3 +514,11 @@ def makeDark(name, maxPixel, value, matrix):
     darkMatrix = np.subtract(matrix, value)
     darkMatrix = np.maximum(darkMatrix, 0)
     makeImage(name, 'darkerby{}'.format(value), maxPixel, darkMatrix)
+
+
+def makeDir(name):
+    if not os.path.exists(name):
+        os.mkdir(name)
+        print("A new directory was created for the ", name, " Library")
+    else:
+        print("DIrectiory ", name, "already exsists, no need to creat")
