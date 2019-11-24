@@ -6,6 +6,20 @@ import os
 # imageLibrary - Sci2000 - T01 - Andrew Marinic - 7675509
 
 
+def makeCircLib(name, row, col, maxPix):
+    maxRadius = int(min(row, col)/2)  # #maximum radius to fit the picture
+    dec = max(1, int(maxRadius/25))
+    lib_dir = name + "_" + str(maxRadius) + "_Lib"
+    makeDir(lib_dir)
+    os.chdir(lib_dir)
+    for radius in range(dec, maxRadius, dec):
+        out = makeCircle(row, col, radius, maxPix,
+                         int(col/2), int(row/2), black=False)
+        makeImage("circle.pgm", radius, 255, out)
+
+    os.chdir(os.path.normpath(os.getcwd() + os.sep + os.pardir))
+
+
 # this function makes a circle matrix
 def makeCircle(matRow, matCol, radius, maxPix, xCord, yCord, black=True):
     mat = np.zeros((matRow, matCol))
@@ -519,7 +533,7 @@ def makeDark(name, maxPixel, value, matrix):
 def makeDir(name):
     if not os.path.exists(name):
         os.mkdir(name)
-        print("A new directory was created for: ", name)
+        print("A new directory was created for: ", name, "\n")
     else:
         print("Directiory: ", name, ", already exsists",
-              "no need to create another")
+              "no need to create another\n")
