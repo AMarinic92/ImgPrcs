@@ -13,6 +13,24 @@ mat = matList[0]
 maxPix = matList[1]
 row = np.shape(mat)[0]
 col = np.shape(mat)[1]
+print("Please select a low threshold for noise\n",
+      "reduction in uncanny edge detect")
+low = int(input())
+print("Please select a high threshold for noise\n",
+      "reduction in uncanny edge detect")
+high = int(input())
+found = False
+checkName = file_name + '_Uncanny_' + str(low) + '_' + str(high)
+for files in os.scandir(path='.'):
+    if(files == checkName):
+        found = True
+if not found:
+    print("No Uncanny Edge Detection for picture and thresholds, making one")
+    il.makeImage(file_name, "Uncanny_{0}_{1}".format(str(low), str(high)),
+                 maxPix, il.uncannyEdge(mat, maxPix, low, high))
+else:
+    print("Uncanny edge detect for image already exsists")
+
 print("Please enter the number of trials you would like to attempt.\n",
       "Each trial breaksdown an image into smaller submatrices to scan\n",
       "starting with the entire image as the first submatrix, each trial\n",
