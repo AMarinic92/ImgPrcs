@@ -474,3 +474,24 @@ def calcD(testArray, maxpixel, libDirectory):
         else:
             print('Is a face. Add to library.')
         return
+
+
+def auto_brighten(array):
+    max = np.amax(array)
+    min = np.amin(array)
+
+    numrows, numcols = array.shape
+    for r in range(numrows):
+        for c in range(numcols):
+            ratio_upper = max - array[r,c]
+            ratio_lower = array[r,c] - min
+
+            # After getting the original ratio of the pixel's distance from the max and min pixel value
+            # we can rescale the pixel relative to a new max and min pixel value 
+            # in this function, we are scaling the image to have its darkest value as 0
+            # and its brightest value as 255  
+            step = 255 / (ratio_upper + ratio_lower)
+            array[r,c] = math.trunc(step * ratio_lower)  
+    
+    
+    return array
