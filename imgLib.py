@@ -15,9 +15,8 @@ def makeCircLib(name, row, col, maxPix):
     for radius in range(dec, maxRadius, dec):
         out = makeCircle(row, col, radius, maxPix,
                          int(col/2), int(row/2), black=False)
-        makeImage("circle.pgm", radius, 255, out)
-
-    os.chdir(os.path.normpath(os.getcwd() + os.sep + os.pardir))
+        imgName = str(radius) + ".pgm"
+        makeImage(imgName, "", 255, out)
 
 
 # this function makes a circle matrix
@@ -473,8 +472,10 @@ def makeMatrix(fileName):
 # value of the matrix, and the np.array of the matrix. It then writes the file
 # withe the appropriate header based on the file type and size of np.array
 def makeImage(name, nameMod, maxPixel, matrix):
-
-    out = open('{0}_{1}{2}'.format(name[0:-4], nameMod, name[-4:]), 'w')
+    if nameMod != "":
+        out = open('{0}_{1}{2}'.format(name[0:-4], nameMod, name[-4:]), 'w')
+    else:
+        out = open('{0}{1}'.format(name[:-4], name[-4:]), 'w')
     if(name[-4:] == '.pbm'):
         out.write('P1 \n')
     if(name[-4:] == '.pgm'):
