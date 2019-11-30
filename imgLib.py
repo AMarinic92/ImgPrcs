@@ -13,13 +13,15 @@ def makeCircLib(name, row, col, maxPix):
     makeDir(lib_dir)
     os.chdir(lib_dir)
     for radius in range(dec, maxRadius, dec):
-        out = makeCircle(row, col, radius, maxPix,
-                         int(col/2), int(row/2), black=False)
+        out = makeCircle(row, col, radius, maxPix, int(col/2), int(row/2),
+                         black=False)
         imgName = str(radius) + ".pgm"
         makeImage(imgName, "", 255, out)
 
 
-# this function makes a circle matrix
+# this function makes a circle matrix that is a ring of the selected colour
+# either black(if true) on a white background or white(if false) on a black
+# background
 def makeCircle(matRow, matCol, radius, maxPix, xCord, yCord, black=True):
     mat = np.zeros((matRow, matCol))
     midX = xCord
@@ -36,15 +38,30 @@ def makeCircle(matRow, matCol, radius, maxPix, xCord, yCord, black=True):
     set to False, the pixels making how to test if I can connect to serverup
     the circle are set to MAXPIXEL.
     """
+    inradius = int(radius*.99)
     for ay in range(-radius, radius):
         # ay is the y-coordinate, measured with respect to the center
         # of the circle.
         # at height ay, the horizontal distance from the y-axis to the
         # boundary of the circle is sqrt(r^2 - ay^2)
+
         boundx = math.sqrt(radius*radius - ay*ay)
         for ax in range(-radius, radius):
             if -boundx < ax and ax < boundx:
                 if black:
+                    mat[midY+ay, midX+ax] = 0
+                else:
+                    mat[midY+ay, midX+ax] = maxPix
+    for ay in range(-inradius, inradius):
+        # ay is the y-coordinate, measured with respect to the center
+        # of the circle.
+        # at height ay, the horizontal distance from the y-axis to the
+        # boundary of the circle is sqrt(r^2 - ay^2)
+
+        boundx = math.sqrt(inradius*inradius - ay*ay)
+        for ax in range(-inradius, inradius):
+            if -boundx < ax and ax < boundx:
+                if not black:
                     mat[midY+ay, midX+ax] = 0
                 else:
                     mat[midY+ay, midX+ax] = maxPix

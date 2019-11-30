@@ -395,15 +395,14 @@ def calcD(testArray, maxpixel, libDirectory):
         # Import library of faces and add to a list
         N = []
         for filename in os.scandir(libDirectory):
-            print(filename)
             filetype, maxpixel, array = readimage(filename)
             N.append(np.ndarray.flatten(array).tolist())
-        
+
         # Transform list into a matrix
         M = np.array(N)
         numrows, numcols = M.shape
 
-        
+
         u = np.zeros((1, numcols))
         for y in range(numcols):
             u[0,y] = M[:,y].mean()
@@ -437,7 +436,7 @@ def calcD(testArray, maxpixel, libDirectory):
             k += 1
 
         if k == 0:
-            k = 1 
+            k = 1
 
         l = l[0:k]
         v = v[0:k]
@@ -447,7 +446,7 @@ def calcD(testArray, maxpixel, libDirectory):
         for j in range(k):
             y[:,j] = np.matmul(LT, v[j])
             y[j] = np.linalg.norm(y[j], 1, keepdims = True)
-        
+
         # For every row in L, get the dot product of that whole row with every eigenface in y
         W = y.copy()
         for c in range(LT.shape[1]):
@@ -462,7 +461,7 @@ def calcD(testArray, maxpixel, libDirectory):
 
         for j in range(k):
             w[0,j] = v@y[:,j]
-        
+
         # Derive the distance
         for j in range(W.shape[0]):
             d_vector[j] = abs(W[j] - w)
@@ -476,7 +475,7 @@ def calcD(testArray, maxpixel, libDirectory):
 
 def calcD_all(testSlice, libDirectory):
     # Gets the distance of a slice of the original test array with each library image per se
-    # This version of calcD will not need to derive weights for an "average ball" 
+    # This version of calcD will not need to derive weights for an "average ball"
     ballFound = False
     for filename in os.scandir(libDirectory):
         filetype, maxpixel, array = readimage(filename)
@@ -492,14 +491,15 @@ def calcD_all(testSlice, libDirectory):
     if ballFound:
         print("A ball had been detected in this slice")
 
-    return ballFound        
+    return ballFound
 
 
 
 def calcD_single(testSlice, basisImage):
+    # Helper for CalcD_all
     numrows, numcols = testSlice.shape
     diffArray = abs(testSlice - basisImage)
-    d = np.sum(diffArray) / (numrows*numcols) 
+    d = np.sum(diffArray) / (numrows*numcols)
     return d
 
 
@@ -516,13 +516,13 @@ def auto_brighten(array, maxpixel):
                 ratio_lower = array[r,c] - min
 
                 # After getting the original ratio of the pixel's distance from the max and min pixel value
-                # we can rescale the pixel relative to a new max and min pixel value 
+                # we can rescale the pixel relative to a new max and min pixel value
                 # in this function, we are scaling the image to have its darkest value as 0
-                # and its brightest value as 255  
+                # and its brightest value as 255
                 step = 255 / (ratio_upper + ratio_lower)
                 array[r,c] = math.ceil(step * ratio_lower)
     else:
         ratio = 255 / maxpixel
-        array.fill(max * ratio) 
-    
+        array.fill(max * ratio)
+
     return array

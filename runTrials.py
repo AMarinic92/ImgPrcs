@@ -9,7 +9,8 @@ prj_dir = file_name[:-4] + "_Exp"  # name of the project directory
 il.makeDir(prj_dir)
 matList = il.makeMatrix(file_name)
 os.chdir(prj_dir)
-mat = imf.auto_brighten(matList[0])  # our matrix we will be testing
+maxPix = matList[1]
+mat = imf.auto_brighten(matList[0], maxPix)  # our matrix we will be testing
 maxPix = np.amax(mat)  # after brightening grabbing the new largest value
 row = np.shape(mat)[0]  # rows of test image
 col = np.shape(mat)[1]  # columns of test image
@@ -28,7 +29,7 @@ print(checkName)
 if not os.path.exists(checkName):
     print("No Uncanny Edge Detection for picture and thresholds, making one")
     il.makeImage(file_name, "Uncanny_{0}_{1}".format(str(low), str(high)),
-                 maxPix, il.uncannyEdge(mat, maxPix, low, high))
+                 maxPix, imf.uncannyEdge(mat, maxPix, low, high))
 else:
     print("Uncanny edge detect for image already exsists.\n We can just",
           "convert it to a np.array for use")
@@ -41,31 +42,51 @@ else:
 print("Please enter the number of trials you would like to attempt.\n",
       "Each trial breaksdown an image into smaller submatrices to scan\n",
       "starting with the entire image as the first submatrix, each trial\n",
-      "breaking down the image by half each time",
-      "\n(ie  4 trials  = last trial scans 9 quardrants)\n")
+      "breaks down the image into smaller squares")
 trials = int(input())
-trow = row  # trial row
-tcol = col  # trial column
+bSqr = int(min(row, col))  # what is the biggest square for first scan
 for t in range(1, trials+1):
+    # performing tests against a computer generated library of circles
+    if t > 2:
+        # 2nd trial will scan with bSqr, all other trials will shrink
+        # bSqr and use that
+        bSqr = int(bSqr*.75)
+    if t == 1:
+        # if we are doing first trial testing entire image
+        trow = row
+        tcol = col
+    else:
+        # else make library of bSqr
+        trow = bSqr
+        tcol = bSqr
+    tname = "trial_{0}".format(t)
+    il.makeCircLib(tname, trow, tcol, maxPix)
     if t > 1:
-        if trow >= tcol:
-            trow = int(trow/2)
-        else:
-            tcol = int(tcol/2)
-    il.makeCircLib(file_name[:-4], trow, tcol, maxPix)
-    if t > 1:
-        print("need to iterate over sub matrices and run trials")
-        hCol = int(tcol/2)  # half column
-        hRow = int(trow/2)  # half row
-
-        for x in range(hCol, col-hCol,
-                       int(tcol/4)):
-            for y in range(hRow, row-hRow,
-                           int(trow/4)):
-                submat = mat[y-hRow:y+hRow, x-hCol:x+hCol]
+        # if this is not our first trial we are testing slices
+        inc = int(bSqr/4)  # we will increment by a quarter of the square
+        hSqr = int(bSqr/2)  # half the square for calcs
+        print("We need to iterate over sub matrices and run trials")
+        # I want to change to while loops so we can take a bigger jump if we
+        # find a ball that way we dont test the same general area twice for the
+        # same ball
+        for x in range(hSqr, col - hSqr+1, inc):
+            for y in range(hSqr, row - hSqr+1, inc):
+                cord = "({0}, {1})".format(y, x)
+                submat = il.getSub(mat, y, x, bSqr)
+                print("\nTest trial {0} ".format(t),
+                      "at the (y,x) coordinate: {0} ".format(cord),
+                      "looking at a {} x {} square\n".format(bSqr))
+                # test against entire library
                 imf.calcD(submat, maxPix, os.getcwd())
+                print("Testing against individual images in library\n")
+                # test against indvidual images
+                imf.calcD_all(submat, os.getcwd())
         os.chdir(os.path.normpath(os.getcwd() + os.sep + os.pardir))
     else:
+        # else we are testing the image as a whole
+        print("Testing entire image against library of circles\n")
         imf.calcD(mat, maxPix, os.getcwd())
+        print("Testing entire image against each in library\n")
+        imf.calcD_all(mat, os.getcwd())
     os.chdir(os.path.normpath(os.getcwd() + os.sep + os.pardir))
 print("~~~~~~~~~~~~Process Completed~~~~~~~~~~~~")
