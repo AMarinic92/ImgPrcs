@@ -81,7 +81,6 @@ for t in range(1, trials+1):
                 print("Testing against individual images in library\n")
                 # test against indvidual images
                 imf.calcD_all(submat, os.getcwd())
-        os.chdir(os.path.normpath(os.getcwd() + os.sep + os.pardir))
     else:
         # else we are testing the image as a whole
         print("Testing entire image against library of circles\n")
