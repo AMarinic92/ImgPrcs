@@ -10,7 +10,7 @@
 ## Methodology 
 Using uncanny edge detection is essential for this project. The uncanny process requires a Gaussian blur, it is followed by applying a convolution of a kernel which compares adjacent pixels for likeness to determine an edge, as areas of uniform colour tend not to be edges. The edge is further refined by comparing the edge in an appropriate angle, either horizontally, vertically, or with slope 1 or-1. This will help thin the edge, we then finish off the process by suppressing noise which ignores weak pixels. This is allows us to have the most defining aspects of the images for comparison.
 
-One of method of generating our library is by the use of 
+One of method of generating our library is by the use of `makeCirc`
 	 
 
  - choosing a generated library and comparing balls and non balls to it as opposed to choosing images to compare directly to may prevent bias? (YES! Our hypothesis is pretty substantial now, you can refer to it or transfer some wording to the methodology, I'll start outlining the steps for my functions so that you can start including them here)
@@ -19,8 +19,8 @@ One of method of generating our library is by the use of
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU1OTA0OTg2NSwyMTQ5MDg1MDAsMTYyNj
-Q1NDE5OSwtMTgzNDc2NjkyOCwtMTQ3MjU0NjQ1MywtODgwMjc0
-Mjc0LDI5MjQ5OTAyNywtODM2Nzc2ODg0LDU1NDU1MTg5OCwtMT
-c5MjUwNDUxOSwtNzI3NzU0ODgxLDEzMzk5MjExODNdfQ==
+eyJoaXN0b3J5IjpbOTc1NTk1MDc2LDIxNDkwODUwMCwxNjI2ND
+U0MTk5LC0xODM0NzY2OTI4LC0xNDcyNTQ2NDUzLC04ODAyNzQy
+NzQsMjkyNDk5MDI3LC04MzY3NzY4ODQsNTU0NTUxODk4LC0xNz
+kyNTA0NTE5LC03Mjc3NTQ4ODEsMTMzOTkyMTE4M119
 -->
