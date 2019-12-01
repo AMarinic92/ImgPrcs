@@ -10,7 +10,7 @@
 ## Methodology 
 Using uncanny edge detection is essential for this project. The uncanny process requires a Gaussian blur, it is followed by applying a convolution of a kernel which compares adjacent pixels for likeness to determine an edge, as areas of uniform colour tend not to be edges. The edge is further refined by comparing the edge in an appropriate angle, either horizontally, vertically, or with slope 1 or-1. This will help thin the edge, we then finish off the process by suppressing noise which ignores weak pixels. This is allows us to have the most defining aspects of the images for comparison.
 
-One of method of generating our library is by the use of `makeCircle` which is a modified version of Dr. Vaughns face making algorithm. It simply draws a circle of the desire colour (either white or black) and then embeds a circle of the opposite colour inside of it to generate a ring. The ring resembles the results of a circle after uncanny edge with less work for the computer. 
+One of method of generating our library is by the use of `makeCircle` which is a modified version of Dr. Vaughns face making algorithm. It simply draws a circle of the desire colour (either white or black) and then embeds a circle of the opposite colour inside of it to generate a ring. The ring resembles the results of a circle after uncanny edge with less work for the computer. The  
 	 
 
  - choosing a generated library and comparing balls and non balls to it as opposed to choosing images to compare directly to may prevent bias? (YES! Our hypothesis is pretty substantial now, you can refer to it or transfer some wording to the methodology, I'll start outlining the steps for my functions so that you can start including them here)
@@ -19,9 +19,9 @@ One of method of generating our library is by the use of `makeCircle` which is a
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzYwNTA2NTYzLDcyMjUxNzM2OCwyMTQ5MD
-g1MDAsMTYyNjQ1NDE5OSwtMTgzNDc2NjkyOCwtMTQ3MjU0NjQ1
-MywtODgwMjc0Mjc0LDI5MjQ5OTAyNywtODM2Nzc2ODg0LDU1ND
-U1MTg5OCwtMTc5MjUwNDUxOSwtNzI3NzU0ODgxLDEzMzk5MjEx
-ODNdfQ==
+eyJoaXN0b3J5IjpbLTI0Njk1MDQxOCwzNjA1MDY1NjMsNzIyNT
+E3MzY4LDIxNDkwODUwMCwxNjI2NDU0MTk5LC0xODM0NzY2OTI4
+LC0xNDcyNTQ2NDUzLC04ODAyNzQyNzQsMjkyNDk5MDI3LC04Mz
+Y3NzY4ODQsNTU0NTUxODk4LC0xNzkyNTA0NTE5LC03Mjc3NTQ4
+ODEsMTMzOTkyMTE4M119
 -->
