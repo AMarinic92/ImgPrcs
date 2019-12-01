@@ -10,7 +10,7 @@
 ## Methodology 
 Running the `runTrials.py` `(Andrew)`starts an experiment to test an ascii PMG file. Each of these experiments is organised into a folder where the uncanny edge detection of the test image and folders containing test libraries is held. This helps keep our trials separate and makes iteration over the libraries easy. The 
 
-Using `uncannyEdge`*(Andrea)* detection is essential for this project. The uncanny process requires a Gaussian blur, it is followed by applying a convolution of a kernel which compares adjacent pixels for likeness to determine an edge, as areas of uniform colour tend not to be edges. The edge is further refined by comparing the edge in an appropriate angle, either horizontally, vertically, or with slope 1 or-1. This will help thin the edge, we then finish off the process by suppressing noise which ignores weak pixels. This is allows us to have the most defining aspects of the images for comparison.
+Using `uncannyEdge`*(Andrea)* detection is essential for this project. The uncanny process requires a Gaussian blur, it is followed by applying a convolution of a kernel which compares adjacent pixels for likeness to determine an edge, as areas of uniform colour tend not to be edges. The edge is further refined by comparing the edge in an appropriate angle, either horizontally, vertically, or with slope 1 or -1. This will help thin the edge, we then finish off the process by suppressing noise which ignores weak pixels. This is allows us to have the most defining aspects of the images for comparison.
 
 One of method of generating our library is by the use of `makeCircle`*(Andrew)* which is a modified version of Dr.Vaughns face making algorithm. It simply draws a circle of the desire colour (either white or black) and then embeds a circle of the opposite colour inside of it to generate a ring. The ring resembles the results of a circle after uncanny edge with less work for the computer. The `overloadLib` *(Andrew)* generates a reasonably sized library of the images with `makeCircle`*(Andrew)* in varying radii and locations. One of the issues that occurred was making a library that represented a what an image with a ball could be while giving a reasonably sized library to compute `calcD`*(Andrea).
 	 
@@ -21,11 +21,11 @@ One of method of generating our library is by the use of `makeCircle`*(Andrew)* 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExOTI3Njc4MCwzNjcwMDg5MTYsMTM3MT
-ExMjg5MSwxMDEzOTY4MzExLDI3NjMwOTg1NSwtNDgzOTgzODc2
-LC0xNzIxNDA3OTU0LDM2MDUwNjU2Myw3MjI1MTczNjgsMjE0OT
-A4NTAwLDE2MjY0NTQxOTksLTE4MzQ3NjY5MjgsLTE0NzI1NDY0
-NTMsLTg4MDI3NDI3NCwyOTI0OTkwMjcsLTgzNjc3Njg4NCw1NT
-Q1NTE4OTgsLTE3OTI1MDQ1MTksLTcyNzc1NDg4MSwxMzM5OTIx
-MTgzXX0=
+eyJoaXN0b3J5IjpbLTIwMTAwNzAwMjgsLTExOTI3Njc4MCwzNj
+cwMDg5MTYsMTM3MTExMjg5MSwxMDEzOTY4MzExLDI3NjMwOTg1
+NSwtNDgzOTgzODc2LC0xNzIxNDA3OTU0LDM2MDUwNjU2Myw3Mj
+I1MTczNjgsMjE0OTA4NTAwLDE2MjY0NTQxOTksLTE4MzQ3NjY5
+MjgsLTE0NzI1NDY0NTMsLTg4MDI3NDI3NCwyOTI0OTkwMjcsLT
+gzNjc3Njg4NCw1NTQ1NTE4OTgsLTE3OTI1MDQ1MTksLTcyNzc1
+NDg4MV19
 -->
