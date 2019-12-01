@@ -10,7 +10,7 @@
 ## Methodology 
 Using uncanny edge detection is essential for this project. The uncanny process requires a Gaussian blur, it is followed by applying a convolution of a kernel which compares adjacent pixels for likeness to determine an edge, as areas of uniform colour tend not to be edges. The edge is further refined by comparing the edge in an appropriate angle, either horizontally, vertically, or with slope 1 or-1. This will help thin the edge, we then finish off the process by suppressing noise which ignores weak pixels. This is allows us to have the most defining aspects of the images for comparison.
 
-One of method of generating our library is by the use of `makeCircle`*(Andrew)* which is a modified version of Dr. Vaughns face making algorithm. It simply draws a circle of the desire colour (either white or black) and then embeds a circle of the opposite colour inside of it to generate a ring. The ring resembles the results of a circle after uncanny edge with less work for the computer. The `overloadLib` *(Andrew)* generates a reasonably sized library of the images with `makeCircle` in varying radii and locations. One of the issues that occurred was making a library that represented a what an image with a ball could be while giving a reasona
+One of method of generating our library is by the use of `makeCircle`*(Andrew)* which is a modified version of Dr. Vaughns face making algorithm. It simply draws a circle of the desire colour (either white or black) and then embeds a circle of the opposite colour inside of it to generate a ring. The ring resembles the results of a circle after uncanny edge with less work for the computer. The `overloadLib` *(Andrew)* generates a reasonably sized library of the images with `makeCircle` in varying radii and locations. One of the issues that occurred was making a library that represented a what an image with a ball could be while giving a reasonably sized library to compute calcD
 	 
 
  - choosing a generated library and comparing balls and non balls to it as opposed to choosing images to compare directly to may prevent bias? (YES! Our hypothesis is pretty substantial now, you can refer to it or transfer some wording to the methodology, I'll start outlining the steps for my functions so that you can start including them here)
@@ -19,10 +19,10 @@ One of method of generating our library is by the use of `makeCircle`*(Andrew)* 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2NTUyNTc3MSwtNDgzOTgzODc2LC0xNz
-IxNDA3OTU0LDM2MDUwNjU2Myw3MjI1MTczNjgsMjE0OTA4NTAw
-LDE2MjY0NTQxOTksLTE4MzQ3NjY5MjgsLTE0NzI1NDY0NTMsLT
-g4MDI3NDI3NCwyOTI0OTkwMjcsLTgzNjc3Njg4NCw1NTQ1NTE4
-OTgsLTE3OTI1MDQ1MTksLTcyNzc1NDg4MSwxMzM5OTIxMTgzXX
-0=
+eyJoaXN0b3J5IjpbMjc2MzA5ODU1LC00ODM5ODM4NzYsLTE3Mj
+E0MDc5NTQsMzYwNTA2NTYzLDcyMjUxNzM2OCwyMTQ5MDg1MDAs
+MTYyNjQ1NDE5OSwtMTgzNDc2NjkyOCwtMTQ3MjU0NjQ1MywtOD
+gwMjc0Mjc0LDI5MjQ5OTAyNywtODM2Nzc2ODg0LDU1NDU1MTg5
+OCwtMTc5MjUwNDUxOSwtNzI3NzU0ODgxLDEzMzk5MjExODNdfQ
+==
 -->
