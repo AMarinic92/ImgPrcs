@@ -6,13 +6,35 @@ import os
 # imageLibrary - Sci2000 - T01 - Andrew Marinic - 7675509
 
 
-def makeCircLib(name, row, col, maxPix):
-    maxRadius = int(min(row, col)/2)  # #maximum radius to fit the picture
-    dec = max(1, int(maxRadius/25))
+def overloadLib(name, row, col, maxPix):
+    maxRadius = int(min(row, col)/2)  # maximum radius to fit the picture
+    inc = max(1, int(maxRadius/5))  # increments
     lib_dir = name + "_" + str(maxRadius) + "_Lib"
     makeDir(lib_dir)
     os.chdir(lib_dir)
-    for radius in range(dec, maxRadius, dec):
+    for radius in range(inc, maxRadius, inc):
+        out = makeCircle(row, col, radius, maxPix, int(col/2), int(row/2),
+                         black=False)
+        imgName = str(radius) + "_" + str(int(col/2)) + "_" + str(int(row/2))
+        imgName = imgName + ".pgm"
+        makeImage(imgName, "", 255, out)
+        for x in range(radius, col-radius+1, radius*2):
+            for y in range(radius, row-radius+1, radius*2):
+                out = makeCircle(row, col, radius, maxPix, x, y, black=False)
+                imgName = str(radius) + "_" + str(x) + "_" + str(y) + ".pgm"
+                makeImage(imgName, "", 255, out)
+
+
+# This is what I use for generating a new folder and a bunch of different
+# radius ceneterd circles. name is used for making the folder row and col are
+# dimensions and maxPix is the maxPixel value of the circles
+def makeCircLib(name, row, col, maxPix):
+    maxRadius = int(min(row, col)/2)  # #maximum radius to fit the picture
+    inc = max(1, int(maxRadius/25))  # increments
+    lib_dir = name + "_" + str(maxRadius) + "_Lib"
+    makeDir(lib_dir)
+    os.chdir(lib_dir)
+    for radius in range(inc, maxRadius, inc):
         out = makeCircle(row, col, radius, maxPix, int(col/2), int(row/2),
                          black=False)
         imgName = str(radius) + ".pgm"
@@ -21,7 +43,9 @@ def makeCircLib(name, row, col, maxPix):
 
 # this function makes a circle matrix that is a ring of the selected colour
 # either black(if true) on a white background or white(if false) on a black
-# background
+# background. matRow and matCol are the dimension of the matrix, radius is the
+# radius if the desired ring, maxPix is the maxPixel value of the image, xCord
+# and yCord is where you want the image to be centerd, black is described above
 def makeCircle(matRow, matCol, radius, maxPix, xCord, yCord, black=True):
     mat = np.zeros((matRow, matCol))
     midX = xCord
@@ -31,9 +55,6 @@ def makeCircle(matRow, matCol, radius, maxPix, xCord, yCord, black=True):
     if yCord < int(radius/2) or yCord > matRow-int(radius/2):
         midY = int(matRow/2)
     """
-    circledata is a 3-tuple containing the radius of the circle and the x- and
-    y- coordinates of the center of the circle.  All of these values should be
-    integers.
     By default, the pixels making up the circle are set to 0.  If black is
     set to False, the pixels making how to test if I can connect to serverup
     the circle are set to MAXPIXEL.

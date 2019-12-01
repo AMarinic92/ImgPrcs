@@ -60,7 +60,7 @@ for t in range(1, trials+1):
         trow = bSqr
         tcol = bSqr
     tname = "trial_{0}".format(t)
-    il.makeCircLib(tname, trow, tcol, maxPix)
+    il.overloadLib(tname, trow, tcol, maxPix)
     if t > 1:
         # if this is not our first trial we are testing slices
         inc = int(bSqr/4)  # we will increment by a quarter of the square
@@ -75,7 +75,7 @@ for t in range(1, trials+1):
                 submat = il.getSub(mat, y, x, bSqr)
                 print("\nTest trial {0} ".format(t),
                       "at the (y,x) coordinate: {0} ".format(cord),
-                      "looking at a {} x {} square\n".format(bSqr))
+                      "looking at a {0} x {0} square\n".format(bSqr))
                 # test against entire library
                 imf.calcD(submat, maxPix, os.getcwd())
                 print("Testing against individual images in library\n")
