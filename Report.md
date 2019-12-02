@@ -18,7 +18,7 @@ One of method of generating our library is by the use of `makeCircle`*(Andrew)* 
 
 `runTrials.py` also is responsible for scanning our image. The script asks for an input of trials to be run. Each trial after the first treats the test image as a sub-matrix of the whole image and changes its position effectively scanning the test image with a smaller square each time. One issue which can occur during scanning is how large of increments are taken. If a ball is found you may scan the same area counting multiple regions as containing balls when in reality it may be the same ball. If a ball is detected in a region it may prove to be effective to jump a large span in the scan to prevent this. Alternatively it may also be effective to compare d-values (difference of edges) of adjacent slices to see which is closest to our thresholds of what is and is not a ball. 
 
- - choosing a generated library and comparing balls and non balls to it as opposed to choosing images to compare directly to may prevent bias? (YES! Our hypothesis is pretty substantial now, you can refer to it or transfer some wording to the methodology, I'll start outlining the steps for my functions so that you can start including them here)
+ - I'll start outlining the steps for my functions so that you can start including them here)
  - 
  
 
@@ -37,11 +37,11 @@ One of method of generating our library is by the use of `makeCircle`*(Andrew)* 
 | Ferret.ogm        	| Circular Symmetry 	| Circular symmetry, noisy symmetry like tennis ball                                                           	|
 | Bicycle.pgm       	| Circular Symmetry 	| Multiple circular objects, lots of noise in picture                                                          	|
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzY5MzY5OTg3LC0xMjA0NjExNTAyLC00MD
-I3MjU3ODQsLTE4NTQ4MDg2NzMsMTAwMTI5ODg2MywtMTM5MDE3
-MTM4NywtMjAxMDA3MDAyOCwtMTE5Mjc2NzgwLDM2NzAwODkxNi
-wxMzcxMTEyODkxLDEwMTM5NjgzMTEsMjc2MzA5ODU1LC00ODM5
-ODM4NzYsLTE3MjE0MDc5NTQsMzYwNTA2NTYzLDcyMjUxNzM2OC
-wyMTQ5MDg1MDAsMTYyNjQ1NDE5OSwtMTgzNDc2NjkyOCwtMTQ3
-MjU0NjQ1M119
+eyJoaXN0b3J5IjpbLTI2NTI5MzU1NCwtMTIwNDYxMTUwMiwtND
+AyNzI1Nzg0LC0xODU0ODA4NjczLDEwMDEyOTg4NjMsLTEzOTAx
+NzEzODcsLTIwMTAwNzAwMjgsLTExOTI3Njc4MCwzNjcwMDg5MT
+YsMTM3MTExMjg5MSwxMDEzOTY4MzExLDI3NjMwOTg1NSwtNDgz
+OTgzODc2LC0xNzIxNDA3OTU0LDM2MDUwNjU2Myw3MjI1MTczNj
+gsMjE0OTA4NTAwLDE2MjY0NTQxOTksLTE4MzQ3NjY5MjgsLTE0
+NzI1NDY0NTNdfQ==
 -->
