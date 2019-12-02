@@ -1,6 +1,8 @@
 import numpy as np
 import math
 import os
+import imgLib as il
+
 
 def uncannyEdge(matrix, maxPix, low, high):
     numrows, numcols = matrix.shape
@@ -479,13 +481,10 @@ def calcD_all(testSlice, libDirectory):
     ballFound = False
     for filename in os.scandir(libDirectory):
         filetype, maxpixel, array = readimage(filename)
-        if maxpixel < 255:
-            array = auto_brighten(array, maxpixel)
-
         d = calcD_single(testSlice, array)
         print("The distance of slice with {0} is {1}.".format(filename, d))
 
-        if d < 15:
+        if d < 10: # the probed ring must be at least 10% complete
             ballFound = True
 
     if ballFound:
@@ -498,8 +497,25 @@ def calcD_all(testSlice, libDirectory):
 def calcD_single(testSlice, basisImage):
     # Helper for CalcD_all
     numrows, numcols = testSlice.shape
-    diffArray = abs(testSlice - basisImage)
+    #diffArray = np.zeros((numrows, numcols))    
+
+    cutOff = 75
+    numPix = 0
+    success = 0
+
+    for r in range(numrows):
+        for c in range(numcols):
+            if basisImage[r,c] == 255:
+                numPix += 1 
+                if testSlice[r,c] > cutOff:
+                    success += 1
+                    #diffArray[r,c] = testSlice[r,c]
+
+    ''' # old difference formula, may delete soon along with diffArray init
+    diffArray = (abs(diffArray - basisImage) / numPix) * 100 
     d = np.sum(diffArray) / (numrows*numcols)
+    '''
+    d = success / numPix * 100
     return d
 
 
@@ -525,4 +541,64 @@ def auto_brighten(array, maxpixel):
         ratio = 255 / maxpixel
         array.fill(max * ratio)
 
+    return array
+
+def find_radii(testArray, name):
+    lib_dir = name + "_Lib"
+    il.makeDir(lib_dir)
+    os.chdir(lib_dir)
+    numrows, numcols = testArray.shape
+    midX = math.trunc(numrows/2)
+    midY = math.trunc(numcols/2)
+
+    # take the shorter side as the maximum radius
+    shorter = midY
+    strip = np.zeros((1,1))
+    if midY > midX: # less rows, more columns
+        shorter = midX
+        strip = testArray[midX,0:shorter]
+    else:
+        strip = testArray[0:shorter, midY]
+
+    # we are going to make circles wherever a pixel along the strip is found to be "white enough"
+    # to avoid making too many circles from fainter white noise, we will increase the cutOff 
+    cutOff = 75
+    MAX_CUTOFF = 90
+    while(np.count_nonzero(strip >= cutOff) > 30 and cutOff < MAX_CUTOFF):
+        cutOff += 5
+
+    # trim the strip by 40% from the center
+    # the smaller center is too small to be a ball for one test
+    # our objective is to disregard any detail that is found in the center
+    # that may defeat the brightness of the ball's edge or be seen as another ball
+    bound = math.trunc(shorter*0.4)
+    for x in range(bound):
+        if(strip[x] > cutOff):
+            print("Found white in x:{0}, make ring".format(x))
+            radius = shorter - x
+            image = makeCircle(testArray, radius)
+
+
+def makeCircle(array, radius):
+    numrows, numcols = array.shape
+    print(array.shape)
+    circle = np.zeros((numrows, numcols))
+    midX = math.trunc(numrows/2)
+    midY = math.trunc(numcols/2)
+
+    for angle in range(720):
+        x = int(midX + radius*math.cos(angle/2))
+        y = int(midY + radius*math.sin(angle/2))
+        circle[x,y] = 255
+                
+    il.makeImage("{0}_{1}.pgm".format(radius,radius), "", 255, circle)
+    return circle
+
+
+def stroke(testArray, submat): #under construction
+    # draws a box around the submatrix of the test image where a ball is found
+    numrows, numcols = array.shape
+    box = np.full((numrows,numcols), 255)
+    box[2:numrows-2, 2:numcols-2] = 0
+    array = np.clip(array + box, 0, 255)
     return array
