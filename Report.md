@@ -20,7 +20,7 @@ Calculating the difference between the input image and both the eigen matrix of 
 
 `runTrials.py` also is responsible for scanning our image. The script asks for an input of trials to be run. Each trial after the first treats the test image as a sub-matrix of the whole image and changes its position effectively scanning the test image with a smaller square each time. One issue which can occur during scanning is how large of increments are taken. If a ball is found you may scan the same area counting multiple regions as containing balls when in reality it may be the same ball. If a ball is detected in a region it may prove to be effective to jump a large span in the scan to prevent this. Alternatively it may also be effective to compare d-values (difference of edges) of adjacent slices to see which is closest to our thresholds of what is and is not a ball. 
 
- - I'll start outlining the steps for my functions so that you can start including them here)
+ - I'll start outlining the steimmedialyps for my functions so that you can start including them here)
  - 
  
 
@@ -40,11 +40,11 @@ Calculating the difference between the input image and both the eigen matrix of 
 | Ferret.pgm        	| Circular Symmetry 	| Circular symmetry, noisy symmetry like tennis ball                                                           	|
 | Bicycle.pgm       	| Circular Symmetry 	| Multiple circular objects, lots of noise in picture                                                          	|
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NzQ5MjI0ODQsMTA1NDkyOTY0NywxMD
-E5OTAyNTc0LDE5ODQzMDA4OTEsLTI2NTI5MzU1NCwtMTIwNDYx
-MTUwMiwtNDAyNzI1Nzg0LC0xODU0ODA4NjczLDEwMDEyOTg4Nj
-MsLTEzOTAxNzEzODcsLTIwMTAwNzAwMjgsLTExOTI3Njc4MCwz
-NjcwMDg5MTYsMTM3MTExMjg5MSwxMDEzOTY4MzExLDI3NjMwOT
-g1NSwtNDgzOTgzODc2LC0xNzIxNDA3OTU0LDM2MDUwNjU2Myw3
-MjI1MTczNjhdfQ==
+eyJoaXN0b3J5IjpbODY5NDg0MTMsMTA1NDkyOTY0NywxMDE5OT
+AyNTc0LDE5ODQzMDA4OTEsLTI2NTI5MzU1NCwtMTIwNDYxMTUw
+MiwtNDAyNzI1Nzg0LC0xODU0ODA4NjczLDEwMDEyOTg4NjMsLT
+EzOTAxNzEzODcsLTIwMTAwNzAwMjgsLTExOTI3Njc4MCwzNjcw
+MDg5MTYsMTM3MTExMjg5MSwxMDEzOTY4MzExLDI3NjMwOTg1NS
+wtNDgzOTgzODc2LC0xNzIxNDA3OTU0LDM2MDUwNjU2Myw3MjI1
+MTczNjhdfQ==
 -->
