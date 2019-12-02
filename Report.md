@@ -14,7 +14,7 @@ Using `uncannyEdge`*(Andrea)* detection is essential for this project. The uncan
 
 In order to determine if an image contains a ball or not we need to determine what is a ball and how is it different from 
 
-One of method of generating our library is by the use of `makeCircle`*(Andrew)* which is a modified version of Dr.Vaughns face making algorithm. It simply draws a circle of the desire colour (either white or black) and then embeds a circle of the opposite colour inside of it to generate a ring. The ring resembles the results of a circle after uncanny edge with less work for the computer. The `overloadLib` *(Andrew)* generates a reasonably sized library of the images with `makeCircle`*(Andrew)* in varying radii and locations. One of the issues that occurred was making a library that represented a what an image with a ball could be while giving a reasonably sized library to compute `calcD`*(Andrea)*. This library represents what a picture of a ball with no noise would be. A ball is a sphere and when projected into a 2 dimensional image we produce a circle no matter what angle the ball is taken at. This is not true for circular objects like a wheel, but is true for all spheres that are not balls like a globe. We will then pick a series of images the provided images to test against our computer generated library. Table 1 lists the justifications of trial images used for tuning the algorithm. We chose to compare images to an independent library instead of each other to try and prevent our library developing bias from selection of test images. This will help us tune the algorithm to before we 
+One of method of generating our library is by the use of `makeCircle`*(Andrew)* which is a modified version of Dr.Vaughns face making algorithm. It simply draws a circle of the desire colour (either white or black) and then embeds a circle of the opposite colour inside of it to generate a ring. The ring resembles the results of a circle after uncanny edge with less work for the computer. The `overloadLib` *(Andrew)* generates a reasonably sized library of the images with `makeCircle`*(Andrew)* in varying radii and locations. One of the issues that occurred was making a library that represented a what an image with a ball could be while giving a reasonably sized library to compute `calcD`*(Andrea)*. This library represents what a picture of a ball with no noise would be. A ball is a sphere and when projected into a 2 dimensional image we produce a circle no matter what angle the ball is taken at. This is not true for circular objects like a wheel, but is true for all spheres that are not balls like a globe. We will then pick a series of images the provided images to test against our computer generated library. Table 1 lists the justifications of trial images used for tuning the algorithm. We chose to compare images to an independent library instead of each other to try and prevent our library developing bias from selection of test images. This will help us tune the algorithm to before we start adding to it with balls we have confirmed from test images. 
 
 
 
@@ -37,11 +37,11 @@ One of method of generating our library is by the use of `makeCircle`*(Andrew)* 
 | Ferret.ogm        	| Circular Symmetry 	| Circular symmetry, noisy symmetry like tennis ball                                                           	|
 | Bicycle.pgm       	| Circular Symmetry 	| Multiple circular objects, lots of noise in picture                                                          	|
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ4OTUxMjYwLC0xMjA0NjExNTAyLC00MD
-I3MjU3ODQsLTE4NTQ4MDg2NzMsMTAwMTI5ODg2MywtMTM5MDE3
-MTM4NywtMjAxMDA3MDAyOCwtMTE5Mjc2NzgwLDM2NzAwODkxNi
-wxMzcxMTEyODkxLDEwMTM5NjgzMTEsMjc2MzA5ODU1LC00ODM5
-ODM4NzYsLTE3MjE0MDc5NTQsMzYwNTA2NTYzLDcyMjUxNzM2OC
-wyMTQ5MDg1MDAsMTYyNjQ1NDE5OSwtMTgzNDc2NjkyOCwtMTQ3
-MjU0NjQ1M119
+eyJoaXN0b3J5IjpbMTE4MDk5NTMwMiwtMTIwNDYxMTUwMiwtND
+AyNzI1Nzg0LC0xODU0ODA4NjczLDEwMDEyOTg4NjMsLTEzOTAx
+NzEzODcsLTIwMTAwNzAwMjgsLTExOTI3Njc4MCwzNjcwMDg5MT
+YsMTM3MTExMjg5MSwxMDEzOTY4MzExLDI3NjMwOTg1NSwtNDgz
+OTgzODc2LC0xNzIxNDA3OTU0LDM2MDUwNjU2Myw3MjI1MTczNj
+gsMjE0OTA4NTAwLDE2MjY0NTQxOTksLTE4MzQ3NjY5MjgsLTE0
+NzI1NDY0NTNdfQ==
 -->
