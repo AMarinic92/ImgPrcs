@@ -14,7 +14,7 @@ Using `uncannyEdge`*(Andrea)* detection is essential for this project. The uncan
 
 In order to determine if an image contains a ball or not we need to determine what is a ball and how is it different from 
 
-One of method of generating our library is by the use of `makeCircle`*(Andrew)* which is a modified version of Dr.Vaughns face making algorithm. It simply draws a circle of the desire colour (either white or black) and then embeds a circle of the opposite colour inside of it to generate a ring. The ring resembles the results of a circle after uncanny edge with less work for the computer. The `overloadLib` *(Andrew)* generates a reasonably sized library of the images with `makeCircle`*(Andrew)* in varying radii and locations. One of the issues that occurred was making a library that represented a what an image with a ball could be while giving a reasonably sized library to compute `calcD`*(Andrea)*.
+One of method of generating our library is by the use of `makeCircle`*(Andrew)* which is a modified version of Dr.Vaughns face making algorithm. It simply draws a circle of the desire colour (either white or black) and then embeds a circle of the opposite colour inside of it to generate a ring. The ring resembles the results of a circle after uncanny edge with less work for the computer. The `overloadLib` *(Andrew)* generates a reasonably sized library of the images with `makeCircle`*(Andrew)* in varying radii and locations. One of the issues that occurred was making a library that represented a what an image with a ball could be while giving a reasonably sized library to compute `calcD`*(Andrea)*. We will then pick a series of images the provided images. Tab
 
 
 
@@ -23,7 +23,7 @@ One of method of generating our library is by the use of `makeCircle`*(Andrew)* 
  
 
 # Data and Tables
-## Table 1
+## Table 1 - Tuning selection
 | Image Name        	| Type              	| Justifications                                                                                               	|
 |-------------------	|-------------------	|--------------------------------------------------------------------------------------------------------------	|
 | Tennis-Ball-4.pgm 	| Ball              	| Multiple balls, Furry edges, Noise                                                                           	|
@@ -37,11 +37,11 @@ One of method of generating our library is by the use of `makeCircle`*(Andrew)* 
 | Ferret.ogm        	| Circular Symmetry 	| Circular symmetry, noisy symmetry like tennis ball                                                           	|
 | Bicycle.pgm       	| Circular Symmetry 	| Multiple circular objects, lots of noise in picture                                                          	|
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTI5NDMzMDIyLC0xMjA0NjExNTAyLC00MD
-I3MjU3ODQsLTE4NTQ4MDg2NzMsMTAwMTI5ODg2MywtMTM5MDE3
-MTM4NywtMjAxMDA3MDAyOCwtMTE5Mjc2NzgwLDM2NzAwODkxNi
-wxMzcxMTEyODkxLDEwMTM5NjgzMTEsMjc2MzA5ODU1LC00ODM5
-ODM4NzYsLTE3MjE0MDc5NTQsMzYwNTA2NTYzLDcyMjUxNzM2OC
-wyMTQ5MDg1MDAsMTYyNjQ1NDE5OSwtMTgzNDc2NjkyOCwtMTQ3
-MjU0NjQ1M119
+eyJoaXN0b3J5IjpbLTE2MDMyMjU4NDYsLTEyMDQ2MTE1MDIsLT
+QwMjcyNTc4NCwtMTg1NDgwODY3MywxMDAxMjk4ODYzLC0xMzkw
+MTcxMzg3LC0yMDEwMDcwMDI4LC0xMTkyNzY3ODAsMzY3MDA4OT
+E2LDEzNzExMTI4OTEsMTAxMzk2ODMxMSwyNzYzMDk4NTUsLTQ4
+Mzk4Mzg3NiwtMTcyMTQwNzk1NCwzNjA1MDY1NjMsNzIyNTE3Mz
+Y4LDIxNDkwODUwMCwxNjI2NDU0MTk5LC0xODM0NzY2OTI4LC0x
+NDcyNTQ2NDUzXX0=
 -->
