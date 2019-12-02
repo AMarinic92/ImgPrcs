@@ -16,7 +16,7 @@ In order to determine if an image contains a ball or not we need to determine wh
 
 One of method of generating our library is by the use of `makeCircle`*(Andrew)* which is a modified version of Dr.Vaughns face making algorithm. It simply draws a circle of the desire colour (either white or black) and then embeds a circle of the opposite colour inside of it to generate a ring. The ring resembles the results of a circle after uncanny edge with less work for the computer. The `overloadLib` *(Andrew)* generates a reasonably sized library of the images with `makeCircle`*(Andrew)* in varying radii and locations. One of the issues that occurred was making a library that represented a what an image with a ball could be while giving a reasonably sized library to compute `calcD`*(Andrea)*. This library represents what a picture of a ball with no noise would be. A ball is a sphere and when projected into a 2 dimensional image we produce a circle no matter what angle the ball is taken at. This is not true for circular objects like a wheel, but is true for all spheres that are not balls like a globe. We will then pick a series of images the provided images to test against our computer generated library. Table 1 lists the justifications of trial images used for tuning the algorithm. We chose to compare images to an independent library instead of each other to try and prevent our library developing bias from selection of test images. This will help us tune the algorithm to before we start adding to it with balls we have confirmed from test images. 
 
-Calculating the difference between the input image and both the eigen matrix of the library and each image in it is how we are going to gather empirical evidence to eit
+Calculating the difference between the input image and both the eigen matrix of the library and each image in it is how we are going to gather empirical evidence to prove or disprove our hypothesis. Using the tuning method above we should be able to 
 
 `runTrials.py` also is responsible for scanning our image. The script asks for an input of trials to be run. Each trial after the first treats the test image as a sub-matrix of the whole image and changes its position effectively scanning the test image with a smaller square each time. One issue which can occur during scanning is how large of increments are taken. If a ball is found you may scan the same area counting multiple regions as containing balls when in reality it may be the same ball. If a ball is detected in a region it may prove to be effective to jump a large span in the scan to prevent this. Alternatively it may also be effective to compare d-values (difference of edges) of adjacent slices to see which is closest to our thresholds of what is and is not a ball. 
 
@@ -39,11 +39,11 @@ Calculating the difference between the input image and both the eigen matrix of 
 | Ferret.ogm        	| Circular Symmetry 	| Circular symmetry, noisy symmetry like tennis ball                                                           	|
 | Bicycle.pgm       	| Circular Symmetry 	| Multiple circular objects, lots of noise in picture                                                          	|
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMTEyMTA0OTQsMTk4NDMwMDg5MSwtMj
-Y1MjkzNTU0LC0xMjA0NjExNTAyLC00MDI3MjU3ODQsLTE4NTQ4
-MDg2NzMsMTAwMTI5ODg2MywtMTM5MDE3MTM4NywtMjAxMDA3MD
-AyOCwtMTE5Mjc2NzgwLDM2NzAwODkxNiwxMzcxMTEyODkxLDEw
-MTM5NjgzMTEsMjc2MzA5ODU1LC00ODM5ODM4NzYsLTE3MjE0MD
-c5NTQsMzYwNTA2NTYzLDcyMjUxNzM2OCwyMTQ5MDg1MDAsMTYy
-NjQ1NDE5OV19
+eyJoaXN0b3J5IjpbMTAxOTkwMjU3NCwxOTg0MzAwODkxLC0yNj
+UyOTM1NTQsLTEyMDQ2MTE1MDIsLTQwMjcyNTc4NCwtMTg1NDgw
+ODY3MywxMDAxMjk4ODYzLC0xMzkwMTcxMzg3LC0yMDEwMDcwMD
+I4LC0xMTkyNzY3ODAsMzY3MDA4OTE2LDEzNzExMTI4OTEsMTAx
+Mzk2ODMxMSwyNzYzMDk4NTUsLTQ4Mzk4Mzg3NiwtMTcyMTQwNz
+k1NCwzNjA1MDY1NjMsNzIyNTE3MzY4LDIxNDkwODUwMCwxNjI2
+NDU0MTk5XX0=
 -->
