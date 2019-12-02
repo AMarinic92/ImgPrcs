@@ -47,39 +47,40 @@ trials = int(input())
 bSqr = int(min(row, col))  # what is the biggest square for first scan
 for t in range(1, trials+1):
     # performing tests against a computer generated library of circles
-    if t > 2:
+    if t > 1:
         # 2nd trial will scan with bSqr, all other trials will shrink
         # bSqr and use that
         bSqr = int(bSqr*.75)
     hSqr = int(bSqr/2)
-    if t == 1:
-        # if we are doing first trial testing entire image
-        trow = row
-        tcol = col
+    # else make library of bSqr
+    trow = hSqr*2
+    tcol = hSqr*2
+    tname = "trial_{0}_Overload".format(t)
+    if bSqr % 2 > 0:
+        #  odd square
+        il.overloadLib(tname, trow+1, tcol+1, maxPix)
     else:
-        # else make library of bSqr
-        trow = hSqr*2
-        tcol = hSqr*2
-    tname = "trial_{0}".format(t)
-    il.overloadLib(tname, trow, tcol, maxPix)
-    if t > 1:
-        # if this is not our first trial we are testing slices and scanning the
-        # image for balls
+        #  even square
+        il.overloadLib(tname, trow, tcol, maxPix)
+    if t > 0:
+        # all trials now scan instead of testing entire image. Largest radius
+        # ball can only be as big as smallest dimension
         inc = int(bSqr/4)  # we will increment by a quarter of the square
         hSqr = int(bSqr/2)  # half the square for calcs
         print("We need to iterate over sub matrices and run trials")
-        # I want to change to while loops so we can take a bigger jump if we
-        # find a ball that way we dont test the same general area twice for the
-        # same ball
-        for x in range(hSqr, col - hSqr+1, inc):
-            for y in range(hSqr, row - hSqr+1, inc):
+        x = hSqr
+        y = hSqr
+        #  while loops allow us to make larger jumps if a ball is found
+        while y < row-hSqr+1:
+            while x < col-hSqr+1:
                 cord = "({0}, {1})".format(y, x)
-                if bSqr%2 > 0:
+                if bSqr % 2 > 0:
                     #  if an odd square
                     submat = mat[y-hSqr:y+hSqr+1, x-hSqr:x+hSqr+1]
                 else:
                     #  else an even square
                     submat = mat[y-hSqr:y+hSqr, x-hSqr:x+hSqr]
+                print(np.shape(submat))
                 print("\nTest trial {0} ".format(t),
                       "at the (y,x) coordinate: {0} ".format(cord),
                       "looking at a {0} x {0} square\n".format(bSqr))
@@ -87,12 +88,22 @@ for t in range(1, trials+1):
                 imf.calcD(submat, maxPix, os.getcwd())
                 print("Testing against individual images in library\n")
                 # test against indvidual images
-                imf.calcD_all(submat, os.getcwd())
+                found = imf.calcD_all(submat, os.getcwd())
+                if found:
+                    # if we find a ball lets move over further in the x cord
+                    x = x + hSqr
+                else:
+                    # else we didnt find one lets scan finer in the x cord
+                    x = x + inc
+            # allow us to progress
+            y = y + inc
     else:
+        ''''
         # else we are testing the image as a whole
         print("Testing entire image against library of circles\n")
         imf.calcD(mat, maxPix, os.getcwd())
         print("Testing entire image against each in library\n")
         imf.calcD_all(mat, os.getcwd())
+    '''
     os.chdir(os.path.normpath(os.getcwd() + os.sep + os.pardir))
 print("~~~~~~~~~~~~Process Completed~~~~~~~~~~~~")
