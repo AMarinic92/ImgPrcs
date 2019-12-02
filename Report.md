@@ -30,20 +30,21 @@ Calculating the difference between the input image and both the eigen matrix of 
 |-------------------	|-------------------	|--------------------------------------------------------------------------------------------------------------	|
 | Tennis-Ball-4.pgm 	| Ball              	| Multiple balls, Furry edges, Noise                                                                           	|
 | Baseball-1.pgm    	| Ball              	| Large single ball, Close to centre, Ball has texture                                                         	|
+|Soccer-Ball-1.pgm |Ball | Large, noisey inside and outside, takes up majority of image |
 | Rubber-Ball-7.pgm 	| Ball              	| Image is all balls, All balls are the same, All balls have clean edges                                       	|
 | Golf-Ball-1.pgm   	| Ball              	| Surrounded y lots of noise, Ball dose not blend into noise                                                   	|
 | Basketball-1.pgm  	| Ball              	| Large ball, off centre, texture in ball, noise in image                                                      	|
 | Globe.pgm         	| Sphere(not ball)  	| Computer generated image like library, sphere but not a ball, reflection, most like a ball without being one 	|
 | Sunflower.pgm     	| Circular symmetry 	| Symmetry is round but edges are not close to round                                                           	|
 | CD-ROM.pgm        	| Circular symmetry 	| Perfect circle, Circle in circle, little noise                                                               	|
-| Ferret.ogm        	| Circular Symmetry 	| Circular symmetry, noisy symmetry like tennis ball                                                           	|
+| Ferret.pgm        	| Circular Symmetry 	| Circular symmetry, noisy symmetry like tennis ball                                                           	|
 | Bicycle.pgm       	| Circular Symmetry 	| Multiple circular objects, lots of noise in picture                                                          	|
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAxOTkwMjU3NCwxOTg0MzAwODkxLC0yNj
-UyOTM1NTQsLTEyMDQ2MTE1MDIsLTQwMjcyNTc4NCwtMTg1NDgw
-ODY3MywxMDAxMjk4ODYzLC0xMzkwMTcxMzg3LC0yMDEwMDcwMD
-I4LC0xMTkyNzY3ODAsMzY3MDA4OTE2LDEzNzExMTI4OTEsMTAx
-Mzk2ODMxMSwyNzYzMDk4NTUsLTQ4Mzk4Mzg3NiwtMTcyMTQwNz
-k1NCwzNjA1MDY1NjMsNzIyNTE3MzY4LDIxNDkwODUwMCwxNjI2
-NDU0MTk5XX0=
+eyJoaXN0b3J5IjpbMTA1NDkyOTY0NywxMDE5OTAyNTc0LDE5OD
+QzMDA4OTEsLTI2NTI5MzU1NCwtMTIwNDYxMTUwMiwtNDAyNzI1
+Nzg0LC0xODU0ODA4NjczLDEwMDEyOTg4NjMsLTEzOTAxNzEzOD
+csLTIwMTAwNzAwMjgsLTExOTI3Njc4MCwzNjcwMDg5MTYsMTM3
+MTExMjg5MSwxMDEzOTY4MzExLDI3NjMwOTg1NSwtNDgzOTgzOD
+c2LC0xNzIxNDA3OTU0LDM2MDUwNjU2Myw3MjI1MTczNjgsMjE0
+OTA4NTAwXX0=
 -->
