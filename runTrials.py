@@ -51,18 +51,20 @@ for t in range(1, trials+1):
         # 2nd trial will scan with bSqr, all other trials will shrink
         # bSqr and use that
         bSqr = int(bSqr*.75)
+    hSqr = int(bSqr/2)
     if t == 1:
         # if we are doing first trial testing entire image
         trow = row
         tcol = col
     else:
         # else make library of bSqr
-        trow = bSqr
-        tcol = bSqr
+        trow = hSqr*2
+        tcol = hSqr*2
     tname = "trial_{0}".format(t)
     il.overloadLib(tname, trow, tcol, maxPix)
     if t > 1:
-        # if this is not our first trial we are testing slices
+        # if this is not our first trial we are testing slices and scanning the
+        # image for balls
         inc = int(bSqr/4)  # we will increment by a quarter of the square
         hSqr = int(bSqr/2)  # half the square for calcs
         print("We need to iterate over sub matrices and run trials")
@@ -72,7 +74,12 @@ for t in range(1, trials+1):
         for x in range(hSqr, col - hSqr+1, inc):
             for y in range(hSqr, row - hSqr+1, inc):
                 cord = "({0}, {1})".format(y, x)
-                submat = il.getSub(mat, y, x, bSqr)
+                if bSqr%2 > 0:
+                    #  if an odd square
+                    submat = mat[y-hSqr:y+hSqr+1, x-hSqr:x+hSqr+1]
+                else:
+                    #  else an even square
+                    submat = mat[y-hSqr:y+hSqr, x-hSqr:x+hSqr]
                 print("\nTest trial {0} ".format(t),
                       "at the (y,x) coordinate: {0} ".format(cord),
                       "looking at a {0} x {0} square\n".format(bSqr))

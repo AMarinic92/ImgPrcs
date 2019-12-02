@@ -10,19 +10,23 @@ def overloadLib(name, row, col, maxPix):
     maxRadius = int(min(row, col)/2)  # maximum radius to fit the picture
     inc = max(1, int(maxRadius/5))  # increments
     lib_dir = name + "_" + str(maxRadius) + "_Lib"
-    makeDir(lib_dir)
-    os.chdir(lib_dir)
-    for radius in range(inc, maxRadius, inc):
-        out = makeCircle(row, col, radius, maxPix, int(col/2), int(row/2),
-                         black=False)
-        imgName = str(radius) + "_" + str(int(col/2)) + "_" + str(int(row/2))
-        imgName = imgName + ".pgm"
-        makeImage(imgName, "", 255, out)
-        for x in range(radius, col-radius+1, radius*2):
-            for y in range(radius, row-radius+1, radius*2):
-                out = makeCircle(row, col, radius, maxPix, x, y, black=False)
-                imgName = str(radius) + "_" + str(x) + "_" + str(y) + ".pgm"
-                makeImage(imgName, "", 255, out)
+    exsist = makeDir(lib_dir)
+    os.chdir(lib_dir)  # we will enter the directory if it was created or not
+    if not exsist:
+        # if the directory was just created it must be empty so lets create the
+        # images for the library
+        for radius in range(inc, maxRadius, inc):
+            out = makeCircle(row, col, radius, maxPix, int(col/2), int(row/2),
+                             black=False)
+            imgNm = str(radius) + "_" + str(int(col/2)) + "_" + str(int(row/2))
+            imgNm = imgNm + ".pgm"
+            makeImage(imgNm, "", 255, out)
+            for x in range(radius, col-radius+1, radius*2):
+                for y in range(radius, row-radius+1, radius*2):
+                    out = makeCircle(row, col,
+                                     radius, maxPix, x, y, black=False)
+                    imgNm = str(radius) + "_" + str(x) + "_" + str(y) + ".pgm"
+                    makeImage(imgNm, "", 255, out)
 
 
 # This is what I use for generating a new folder and a bunch of different
@@ -569,10 +573,16 @@ def makeDark(name, maxPixel, value, matrix):
     makeImage(name, 'darkerby{}'.format(value), maxPixel, darkMatrix)
 
 
+# Makes a new directory if one does not exsists and returns false otherwise if
+# the directory exsists it returns true and prints the fact that the directory
+# exists
 def makeDir(name):
+    exists = False
     if not os.path.exists(name):
         os.mkdir(name)
         print("A new directory was created for: ", name, "\n")
     else:
         print("Directiory: ", name, ", already exsists",
               "no need to create another\n")
+        exists = True
+    return exists
