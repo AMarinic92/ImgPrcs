@@ -23,16 +23,25 @@ One of method of generating our library is by the use of `makeCircle`*(Andrew)* 
  
 
 # Data and Tables
-|  **Image Name**|**Type**  | **Justifation**|
-|Baseball-1.pgm|Ball||
-|  |  |
-
+## Table 1
+| Image Name        	| Type              	| Justifications                                                                                               	|
+|-------------------	|-------------------	|--------------------------------------------------------------------------------------------------------------	|
+| Tennis-Ball-4.pgm 	| Ball              	| Multiple balls, Furry edges, Noise                                                                           	|
+| Baseball-1.pgm    	| Ball              	| Large single ball, Close to centre, Ball has texture                                                         	|
+| Rubber-Ball-7.pgm 	| Ball              	| Image is all balls, All balls are the same, All balls have clean edges                                       	|
+| Golf-Ball-1.pgm   	| Ball              	| Surrounded y lots of noise, Ball dose not blend into noise                                                   	|
+| Basketball-1.pgm  	| Ball              	| Large ball, off centre, texture in ball, noise in image                                                      	|
+| Globe.pgm         	| Sphere(not ball)  	| Computer generated image like library, sphere but not a ball, reflection, most like a ball without being one 	|
+| Sunflower.pgm     	| Circular symmetry 	| Symmetry is round but edges are not close to round                                                           	|
+| CD-ROM.pgm        	| Circular symmetry 	| Perfect circle, Circle in circle, little noise                                                               	|
+| Ferret.ogm        	| Circular Symmetry 	| Circular symmetry, noisy symmetry like tennis ball                                                           	|
+| Bicycle.pgm       	| Circular Symmetry 	| Multiple circular objects, lots of noise in picture                                                          	|
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NTQ4MDg2NzMsMTAwMTI5ODg2MywtMT
-M5MDE3MTM4NywtMjAxMDA3MDAyOCwtMTE5Mjc2NzgwLDM2NzAw
-ODkxNiwxMzcxMTEyODkxLDEwMTM5NjgzMTEsMjc2MzA5ODU1LC
-00ODM5ODM4NzYsLTE3MjE0MDc5NTQsMzYwNTA2NTYzLDcyMjUx
-NzM2OCwyMTQ5MDg1MDAsMTYyNjQ1NDE5OSwtMTgzNDc2NjkyOC
-wtMTQ3MjU0NjQ1MywtODgwMjc0Mjc0LDI5MjQ5OTAyNywtODM2
-Nzc2ODg0XX0=
+eyJoaXN0b3J5IjpbLTQwMjcyNTc4NCwtMTg1NDgwODY3MywxMD
+AxMjk4ODYzLC0xMzkwMTcxMzg3LC0yMDEwMDcwMDI4LC0xMTky
+NzY3ODAsMzY3MDA4OTE2LDEzNzExMTI4OTEsMTAxMzk2ODMxMS
+wyNzYzMDk4NTUsLTQ4Mzk4Mzg3NiwtMTcyMTQwNzk1NCwzNjA1
+MDY1NjMsNzIyNTE3MzY4LDIxNDkwODUwMCwxNjI2NDU0MTk5LC
+0xODM0NzY2OTI4LC0xNDcyNTQ2NDUzLC04ODAyNzQyNzQsMjky
+NDk5MDI3XX0=
 -->
