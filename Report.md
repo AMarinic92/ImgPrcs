@@ -8,7 +8,7 @@
 	Our hypothesis is as follows. If we reduce an image down to its edges with the uncanny edge detection this will allow us to gather the most defining aspects of a ball, while eliminating less important information. Comparison of images that have not been reduced to its edges would leave far too many variables to give fair comparisons, such as noise from background and textures and a huge range of greyscale values which will complicate our assessment of a ball. After reducing a test image or slice to its edges, we will generate a library of images to test it. In our situation a series of functions is used to generate a directory with perfectly circular rings of varying radii.  Every individual test sample will be compared to this generated library as opposed to each other. We want our algorithm to generate balls instead of gathering confirmed balls to prevent the bias caused by hand-picking our library images. For calculating the distance of a test image from a hypothetical ball, we will implement the facial recognition method that was discussed in class ** [reference] **. As we would like to extend this application to the maze mosaic virus we chose to design the algorithm with the ability to scan in smaller slices. The shape in which we scan depends on what we are looking for. Maze mosaic bacilli are oblique and should be scanned as a rectangle. On the other hand, we should scan balls as a square because balls are spherical and should match a square's dimensions. Then, we will calculate the covariance from the library of reference images, and we will use this to test how close an image is to resembling a single ball in the slice (which can be the entire image). We will then test each slice against each individual image in our reference library. Performing these two tests will allow for us to see how much our image varies from our reference library and if it is an acceptable ball(based on the computed distance), and at the same time find which image in the library it is closest to. The reference images are named after the radius of the circle in the image allowing for us to estimate the balls approximate pixel radius. This allows us to extend the application to testing the maze cell for infected organelles vs non infected organelles, as we would need to pass a reference of healthy vs non healthy regions of the cell and compare how different from each of the libraries it is so we can associate the region as healthy or infected. Our ball application is essentially the same with "has a ball" and "does not have a ball" as our replacements for healthy and unhealthy. </p>
 
 ## Methodology 
-Running the `runTrials.py` `(Andrew)`starts an experiment to test an ascii PMG file. Each of these experiments is organised into a folder where the uncanny edge detection of the test image and folders containing test libraries is held. This helps keep our trials separate and makes iteration over the libraries easy. 
+Running the `runTrials.py` *(Andrew)* starts an experiment to test an ascii PMG file. Each of these experiments is organised into a folder where the uncanny edge detection of the test image and folders containing test libraries is held. This helps keep our trials separate and makes iteration over the libraries easy. 
 
 Using `uncannyEdge`*(Andrea)* detection is essential for this project. The uncanny process requires a Gaussian blur, it is followed by applying a convolution of a kernel which compares adjacent pixels for likeness to determine an edge, as areas of uniform colour tend not to be edges. The edge is further refined by comparing the edge in an appropriate angle, either horizontally, vertically, or with slope 1 or -1. This will help thin the edge, we then finish off the process by suppressing noise which ignores weak pixels. This is allows us to have the most defining aspects of the images for comparison.
 
@@ -21,11 +21,11 @@ One of method of generating our library is by the use of `makeCircle`*(Andrew)* 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzOTAxNzEzODcsLTIwMTAwNzAwMjgsLT
-ExOTI3Njc4MCwzNjcwMDg5MTYsMTM3MTExMjg5MSwxMDEzOTY4
-MzExLDI3NjMwOTg1NSwtNDgzOTgzODc2LC0xNzIxNDA3OTU0LD
-M2MDUwNjU2Myw3MjI1MTczNjgsMjE0OTA4NTAwLDE2MjY0NTQx
-OTksLTE4MzQ3NjY5MjgsLTE0NzI1NDY0NTMsLTg4MDI3NDI3NC
-wyOTI0OTkwMjcsLTgzNjc3Njg4NCw1NTQ1NTE4OTgsLTE3OTI1
-MDQ1MTldfQ==
+eyJoaXN0b3J5IjpbLTIxNDkxNDE5MSwtMTM5MDE3MTM4NywtMj
+AxMDA3MDAyOCwtMTE5Mjc2NzgwLDM2NzAwODkxNiwxMzcxMTEy
+ODkxLDEwMTM5NjgzMTEsMjc2MzA5ODU1LC00ODM5ODM4NzYsLT
+E3MjE0MDc5NTQsMzYwNTA2NTYzLDcyMjUxNzM2OCwyMTQ5MDg1
+MDAsMTYyNjQ1NDE5OSwtMTgzNDc2NjkyOCwtMTQ3MjU0NjQ1My
+wtODgwMjc0Mjc0LDI5MjQ5OTAyNywtODM2Nzc2ODg0LDU1NDU1
+MTg5OF19
 -->
