@@ -23,7 +23,6 @@ Calculating the difference between the input image and both the eigen matrix of 
 
 In order to determine if an image contains a ball or not we need to determine what is a ball and how is it different from other round objects. 
 
-# Data and Tables
 ## Table 1 - Tuning selection
 | Image Name        	| Type              	| Justifications                                                                                               	|
 |-------------------	|-------------------	|--------------------------------------------------------------------------------------------------------------	|
