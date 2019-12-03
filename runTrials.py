@@ -14,7 +14,11 @@ mat = imf.auto_brighten(matList[0], maxPix)  # our matrix we will be testing
 maxPix = np.amax(mat)  # after brightening grabbing the new largest value
 row = np.shape(mat)[0]  # rows of test image
 col = np.shape(mat)[1]  # columns of test image
-
+'''
+#   This section is for selecting Uncanny edge detection thresholds
+#   If a picture with these thresholds exists we convert it to an np array
+#   Else we make it
+'''
 # Selecting thresholds for uncanny
 print("Please select a low threshold for noise\n",
       "reduction in uncanny edge detect")
@@ -37,29 +41,64 @@ else:
     mat = matList[0]
 
 
+'''
+#  This block handles the trials, their directories,  and the images in them
+#  It also runs the indvidual trials on each slice
+'''
+
+
 # picking how many trials you want to do will do finer scans each trial. The
 # first trial is just looking at the image as whole
 print("Please enter the number of trials you would like to attempt.\n",
       "Each trial breaksdown an image into smaller submatrices to scan\n",
       "starting with the largest square as the first submatrix, each trial\n",
-      "breaks down the image into smaller squares")
+      "breaks down the image into smaller squares. A value less than 1 runs\n",
+      "the entire image against an entire directory, it is very CPU intensive",
+      "\n")
 trials = int(input())
 bSqr = int(min(row, col))  # what is the biggest square for first scan
+'''
+#   Here the individual trials are run. We test our slice agaisnt a library of
+#   images with varying position
+'''
+
+if trials < 1:
+    '''
+    #   This is for later implemantation but currently is too cpu intensive
+    #   It can still be used if used appriopriatly sized image like a small
+    #   cell or slices of a cell. It allows for a custom directory to be fed in
+    '''
+    print("Testing entire image against library\n",
+          "WARNING PROCESS VERY CPU INTESIVE FOR LARGE IMAGE\n",
+          "Type yes/YES/y/Y to continue\n")
+    proceed = input()
+    if (proceed == "YES" or proceed == "y" or proceed == "Y"
+       or proceed == "yes"):
+        tDir = input('input test directory name')
+        imf.calcD(mat, maxPix, tDir)
+        print("Testing entire image against each in library\n")
+        imf.calcD_all(mat, tDir)
+'''
+# This runs the difference calculations for each appropriate slice in each
+# trial one trial may have multiple slices taken from it
+'''
 for t in range(1, trials+1):
     # performing tests against a computer generated library of circles
     if t > 1:
-        # 2nd trial will scan with bSqr, all other trials will shrink
+        # 1st trial will scan with bSqr, all other trials will shrink
         # bSqr and use that
         bSqr = int(bSqr*.75)
-    hSqr = int(bSqr/2)
+    hSqr = int(bSqr/2)  # half of bSqr
     # else make library of bSqr
-    trow = hSqr*2
+    trow = hSqr*2  # can be turned into rectangular positions in later use
     tcol = hSqr*2
-    tname = "trial_{0}".format(t)
+    tname = "trial_{0}".format(t)  # used for naming an calling differnt libs
     otname = "trial_{0}_Overload".format(t)
     if bSqr % 2 > 0:
         #  odd square
         imf.find_radii(mat, tname)
+        # the following line of code is a safe way to go back to the parent dir
+        # on most modern OS even though ".." should work on the important ones
         os.chdir(os.path.normpath(os.getcwd() + os.sep + os.pardir))
         il.overloadLib(otname, trow+1, tcol+1, maxPix)
         os.chdir(os.path.normpath(os.getcwd() + os.sep + os.pardir))
@@ -106,12 +145,4 @@ for t in range(1, trials+1):
                     x = x + inc
             # allow us to progress
             y = y + inc
-    else:
-        ''''
-        # else we are testing the image as a whole
-        print("Testing entire image against library of circles\n")
-        imf.calcD(mat, maxPix, os.getcwd())
-        print("Testing entire image against each in library\n")
-        imf.calcD_all(mat, os.getcwd())
-    '''
 print("~~~~~~~~~~~~Process Completed~~~~~~~~~~~~")
