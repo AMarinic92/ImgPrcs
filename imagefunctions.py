@@ -484,7 +484,7 @@ def calcD_all(testSlice, libDirectory):
         d = calcD_single(testSlice, array)
         print("The distance of slice with {0} is {1}.".format(filename, d))
 
-        if d < 10: # the probed ring must be at least 10% complete
+        if d > 80: # the probed circle must be more than 80% complete
             ballFound = True
 
     if ballFound:
@@ -496,26 +496,49 @@ def calcD_all(testSlice, libDirectory):
 
 def calcD_single(testSlice, basisImage):
     # Helper for CalcD_all
-    numrows, numcols = testSlice.shape
-    #diffArray = np.zeros((numrows, numcols))    
+    numrows, numcols = testSlice.shape  
 
     cutOff = 75
     numPix = 0
-    success = 0
+    success = False
+    score = 0
 
+    # EDGE CASES
+    # We will not need to worry about pixels being uncentered in the edges, no need for test regions
     for r in range(numrows):
-        for c in range(numcols):
+        if basisImage[r,0] == 255:
+            numPix += 1
+            if testSlice[r,0] > cutOff:
+                score += 1
+        if basisImage[r,numcols-1] == 255:
+            numPix += 1
+            if testSlice[r,numcols-1] > cutOff:
+                score += 1
+
+    for c in range(numcols):
+        if basisImage[0,c] == 255:
+            numPix += 1
+            if testSlice[0,c] > cutOff:
+                score += 1
+        if basisImage[numrows-1,c] == 255:
+            numPix += 1
+            if testSlice[numrows-1,c] > cutOff:
+                score += 1
+
+
+    # NON-EDGE CASES
+    for r in range(2, numrows - 2):
+        for c in range(2, numcols - 2):
             if basisImage[r,c] == 255:
                 numPix += 1 
-                if testSlice[r,c] > cutOff:
-                    success += 1
-                    #diffArray[r,c] = testSlice[r,c]
+                testRegion = testSlice[r-2:r+3,c-2:c+3]
+                for t in np.nditer(testRegion):
+                    if t > cutOff and not success:
+                        success = True
+                if success:
+                    score += 1
 
-    ''' # old difference formula, may delete soon along with diffArray init
-    diffArray = (abs(diffArray - basisImage) / numPix) * 100 
-    d = np.sum(diffArray) / (numrows*numcols)
-    '''
-    d = success / numPix * 100
+    d = score / numPix * 100
     return d
 
 
