@@ -9,7 +9,7 @@ import os
 def overloadLib(name, row, col, maxPix):
     maxRadius = int(min(row, col)/2)  # maximum radius to fit the picture
     inc = max(1, int(maxRadius/5))  # increments
-    lib_dir = name + "_" + str(maxRadius) + "_Lib"
+    lib_dir = name + "_Lib"
     exsist = makeDir(lib_dir)
     os.chdir(lib_dir)  # we will enter the directory if it was created or not
     if not exsist:

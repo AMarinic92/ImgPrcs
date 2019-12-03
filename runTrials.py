@@ -41,7 +41,7 @@ else:
 # first trial is just looking at the image as whole
 print("Please enter the number of trials you would like to attempt.\n",
       "Each trial breaksdown an image into smaller submatrices to scan\n",
-      "starting with the entire image as the first submatrix, each trial\n",
+      "starting with the largest square as the first submatrix, each trial\n",
       "breaks down the image into smaller squares")
 trials = int(input())
 bSqr = int(min(row, col))  # what is the biggest square for first scan
@@ -55,13 +55,20 @@ for t in range(1, trials+1):
     # else make library of bSqr
     trow = hSqr*2
     tcol = hSqr*2
-    tname = "trial_{0}_Overload".format(t)
+    tname = "trial_{0}".format(t)
+    otname = "trial_{0}_Overload".format(t)
     if bSqr % 2 > 0:
         #  odd square
-        il.overloadLib(tname, trow+1, tcol+1, maxPix)
+        imf.find_radii(mat, tname)
+        os.chdir(os.path.normpath(os.getcwd() + os.sep + os.pardir))
+        il.overloadLib(otname, trow+1, tcol+1, maxPix)
+        os.chdir(os.path.normpath(os.getcwd() + os.sep + os.pardir))
     else:
         #  even square
-        il.overloadLib(tname, trow, tcol, maxPix)
+        imf.find_radii(mat, tname)
+        os.chdir(os.path.normpath(os.getcwd() + os.sep + os.pardir))
+        il.overloadLib(otname, trow, tcol, maxPix)
+        os.chdir(os.path.normpath(os.getcwd() + os.sep + os.pardir))
     if t > 0:
         # all trials now scan instead of testing entire image. Largest radius
         # ball can only be as big as smallest dimension
@@ -80,18 +87,20 @@ for t in range(1, trials+1):
                 else:
                     #  else an even square
                     submat = mat[y-hSqr:y+hSqr, x-hSqr:x+hSqr]
-                print(np.shape(submat))
                 print("\nTest trial {0} ".format(t),
                       "at the (y,x) coordinate: {0} ".format(cord),
                       "looking at a {0} x {0} square\n".format(bSqr))
                 # test against entire library
-                imf.calcD(submat, maxPix, os.getcwd())
+                imf.calcD(submat, maxPix, (otname+"_Lib"))
                 print("Testing against individual images in library\n")
                 # test against indvidual images
-                found = imf.calcD_all(submat, os.getcwd())
+                found = imf.calcD_all(submat, (tname+"_Lib"))
                 if found:
                     # if we find a ball lets move over further in the x cord
                     x = x + hSqr
+                    # If we find an image here we can add our submat to our
+                    # library to increase our test accuracy and library of
+                    # balls
                 else:
                     # else we didnt find one lets scan finer in the x cord
                     x = x + inc
@@ -105,5 +114,4 @@ for t in range(1, trials+1):
         print("Testing entire image against each in library\n")
         imf.calcD_all(mat, os.getcwd())
     '''
-    os.chdir(os.path.normpath(os.getcwd() + os.sep + os.pardir))
 print("~~~~~~~~~~~~Process Completed~~~~~~~~~~~~")
