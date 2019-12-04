@@ -21,7 +21,7 @@ Calculating the difference between the input image and both the eigen matrix of 
 
 `runTrials.py` also is responsible for scanning our image. The script asks for an input of trials to be run. Each trial after the first treats the test image as a sub-matrix of the whole image and changes its position effectively scanning the test image with a smaller square each time. One issue which can occur during scanning is how large of increments are taken. If a ball is found you may scan the same area counting multiple regions as containing balls when in reality it may be the same ball. If a ball is detected in a region it may prove to be effective to jump a large span in the scan to prevent this. Alternatively it may also be effective to compare d-values (difference of edges) of adjacent slices to see which is closest to our thresholds of what is and is not a ball. 
 
-In order to determine if an image contains a ball or not we need to determine what is a ball and how is it different from other round objects. A series of 
+In order to determine if an image contains a ball or not we need to determine what is a ball and how is it different from other round objects. A series of p
 
 ## Table 1 - Tuning selection
 | Image Name        	| Type              	| Justifications                                                                                               	|
@@ -48,11 +48,11 @@ Like the weighed calcD, this method has its advantages and drawbacks. Calculatin
  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA2MzIyNzE5Myw4Njk0ODQxMywxMDU0OT
-I5NjQ3LDEwMTk5MDI1NzQsMTk4NDMwMDg5MSwtMjY1MjkzNTU0
-LC0xMjA0NjExNTAyLC00MDI3MjU3ODQsLTE4NTQ4MDg2NzMsMT
-AwMTI5ODg2MywtMTM5MDE3MTM4NywtMjAxMDA3MDAyOCwtMTE5
-Mjc2NzgwLDM2NzAwODkxNiwxMzcxMTEyODkxLDEwMTM5NjgzMT
-EsMjc2MzA5ODU1LC00ODM5ODM4NzYsLTE3MjE0MDc5NTQsMzYw
-NTA2NTYzXX0=
+eyJoaXN0b3J5IjpbMTU2Njg5NzUzLDg2OTQ4NDEzLDEwNTQ5Mj
+k2NDcsMTAxOTkwMjU3NCwxOTg0MzAwODkxLC0yNjUyOTM1NTQs
+LTEyMDQ2MTE1MDIsLTQwMjcyNTc4NCwtMTg1NDgwODY3MywxMD
+AxMjk4ODYzLC0xMzkwMTcxMzg3LC0yMDEwMDcwMDI4LC0xMTky
+NzY3ODAsMzY3MDA4OTE2LDEzNzExMTI4OTEsMTAxMzk2ODMxMS
+wyNzYzMDk4NTUsLTQ4Mzk4Mzg3NiwtMTcyMTQwNzk1NCwzNjA1
+MDY1NjNdfQ==
 -->
