@@ -47,14 +47,15 @@ We use a second library generator to aid the processing of calcD_all called find
 Like the weighed calcD, this method has its advantages and drawbacks. Calculating individual distances is a relatively quick method, and is very efficient if the test images has minimal detail and noise. The algorithm has the ability to bypass some faint background noise and noisy central details. However, some test images may still contain more bright noise which will generate a lot of library image files that consume space. Number of comparisons between test image and library images increase and will take more time. A major drawback of this method that the success of this function is extremely dependent on library circles being plotted very close to the size and position of the round object's edges in the test image. We remediated the function by allowing "zeroed-on" pixels to also test its neighbors. Circles that are considerably off-centre when a slice is taken will prove to be a problem. As only hypothetical, centered circles are drawn, assessing distances on other images may not be accurate and ball recognition may fail. The method worked best with single-test, huge, centered balls that fill the image.
  
 # References
-1. Mark Andrew  (2019),  *Tennis Balls And Rackets*. https://publicdomainpictures.net/pictures/230000/velka/palline-da-tennis-e-racchetta.jpg
-2. Siedlecki Piotr
+1. Star Mark Andrew  (2019),  *Tennis Balls And Rackets*. [https://publicdomainpictures.net/pictures/230000/velka/palline-da-tennis-e-racchetta.jpg](https://publicdomainpictures.net/pictures/230000/velka/palline-da-tennis-e-racchetta.jpg)
+2. Siedlecki Piotr (2019), *Baseball Ball*.[https://publicdomainpictures.net/pictures/70000/velka/baseball-ball.jpg](https://publicdomainpictures.net/pictures/70000/velka/baseball-ball.jpg)
+3. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNDA5MTA2NTUsMTU2Njg5NzUzLDg2OT
-Q4NDEzLDEwNTQ5Mjk2NDcsMTAxOTkwMjU3NCwxOTg0MzAwODkx
-LC0yNjUyOTM1NTQsLTEyMDQ2MTE1MDIsLTQwMjcyNTc4NCwtMT
-g1NDgwODY3MywxMDAxMjk4ODYzLC0xMzkwMTcxMzg3LC0yMDEw
-MDcwMDI4LC0xMTkyNzY3ODAsMzY3MDA4OTE2LDEzNzExMTI4OT
-EsMTAxMzk2ODMxMSwyNzYzMDk4NTUsLTQ4Mzk4Mzg3NiwtMTcy
-MTQwNzk1NF19
+eyJoaXN0b3J5IjpbMjI2NTEyNzI3LDE1NjY4OTc1Myw4Njk0OD
+QxMywxMDU0OTI5NjQ3LDEwMTk5MDI1NzQsMTk4NDMwMDg5MSwt
+MjY1MjkzNTU0LC0xMjA0NjExNTAyLC00MDI3MjU3ODQsLTE4NT
+Q4MDg2NzMsMTAwMTI5ODg2MywtMTM5MDE3MTM4NywtMjAxMDA3
+MDAyOCwtMTE5Mjc2NzgwLDM2NzAwODkxNiwxMzcxMTEyODkxLD
+EwMTM5NjgzMTEsMjc2MzA5ODU1LC00ODM5ODM4NzYsLTE3MjE0
+MDc5NTRdfQ==
 -->
