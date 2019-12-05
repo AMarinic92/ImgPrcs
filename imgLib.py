@@ -2,10 +2,150 @@ import numpy as np
 import re
 import math
 import os
+import imagefunctions as imf
 
 # imageLibrary - Sci2000 - T01 - Andrew Marinic - 7675509
 
 
+def adv_calcD(testArray, maxpixel, libDirectory):
+        maxLibSize =  getMaxSize(libDirectory)
+        maxLibSize[0] = max(maxLibSize[0],
+                            np.shape(testArray)[0])
+        maxLibSize[1] = max(maxLibSize[1],
+                            np.shape(testArray)[1])
+        testArray = makeSize(maxLibSize[0], maxLibSize[1], testArray)
+        # Import library of faces and add to a list
+        N = []
+        for filename in os.scandir(libDirectory):
+            filetype, maxpixel, array = imf.readimage(filename)
+            array = makeSize(maxLibSize[0], maxLibSize[1], array)
+            N.append(np.ndarray.flatten(array).tolist())
+
+        # Transform list into a matrix
+        M = np.array(N)
+        numrows, numcols = M.shape
+
+
+        u = np.zeros((1, numcols))
+        for y in range(numcols):
+            u[0,y] = M[:,y].mean()
+        L = M.copy()
+        for x in range(numrows):
+            L[x] = L[x] - u
+
+        LT = L.copy().T
+        L = np.matmul(L, L.T)
+
+        # Derive the eigenvalues and eigenvectors
+        l, v = np.linalg.eig(L)
+
+        # Sort arrays in descending order
+        for n in range(1, l.shape[0]):
+            current = l[n]
+            pos = n
+            while pos > 0 and l[pos - 1] < current:
+                l[pos] = l[pos - 1]
+                v[:, pos] = v[:, pos - 1]
+                pos -= 1
+            l[pos] = current
+
+        # Trim lower 5% of both sets
+        max_total = np.sum(l) * 0.95
+        total = 0
+        k = 0
+        # with k: (total + l[k] <= max_total)
+        while(total < max_total): #until before k
+            total += l[k]
+            k += 1
+
+        if k == 0:
+            k = 1
+
+        l = l[0:k]
+        v = v[0:k]
+
+        # Multiply LT to every eigenvector in v to get y
+        y = np.zeros((LT.shape[0], k))
+        for j in range(k):
+            y[:,j] = np.matmul(LT, v[j])
+            y[j] = np.linalg.norm(y[j], 1, keepdims = True)
+
+        # For every row in L, get the dot product of that whole row with every eigenface in y
+        W = y.copy()
+        for c in range(LT.shape[1]):
+            for j in range(k):
+                W[j] = LT[:,c]@y[:,j]
+
+        # Derive the weight of the test image
+        t = np.ndarray.flatten(testArray.copy())
+        v = t - u
+        w = np.zeros((1, k))
+        d_vector = W.copy()
+
+        for j in range(k):
+            w[0,j] = v@y[:,j]
+
+        # Derive the distance
+        for j in range(W.shape[0]):
+            d_vector[j] = abs(W[j] - w)
+
+        d = np.amin(d_vector)
+        print("Our value for d is {0}.".format(d))
+
+        return d
+
+
+# returns the largest size matrix needed to ensure all images could be retained
+# in the returned size y , x
+def getMaxSize(directory):
+    maxRow = -1
+    maxCol = -1
+    for files in os.scandir(directory):
+        mat = makeMatrix(files)[0]
+        shape = np.shape(mat)
+        if shape[0] > maxRow:
+            maxRow = shape[0]
+        if shape[1] > maxCol:
+            maxCol = shape[1]
+    return [maxRow, maxCol]
+
+
+# takes two matrices of different sizes and makes them the same size which may
+# require both to be sized up in one or both dimensions it returns the resized
+# matOne followed by the resized matTwo
+def makeEqual(matOne, matTwo):
+    maxRow = max(np.shape(matOne)[0], np.shape(matTwo)[0])
+    maxCol = max(np.shape(matOne)[1], np.shape(matTwo)[1])
+    outOne = np.zeros((maxRow, maxCol), dtype=np.int)
+    offY = int((maxRow-np.shape(matOne)[0])/2)
+    offX = int((maxCol-np.shape(matOne)[1])/2)
+    farY = offY+np.shape(matOne)[0]
+    farX = offX+np.shape(matOne)[1]
+    outOne[offY:farY, offX:farX] = matOne
+    outTwo = np.zeros((maxRow, maxCol), dtype=np.int)
+    offY = int((maxRow-np.shape(matTwo)[0])/2)
+    offX = int((maxCol-np.shape(matTwo)[1])/2)
+    farY = offY+np.shape(matTwo)[0]
+    farX = offX+np.shape(matTwo)[1]
+    outTwo[offY:farY, offX:farX] = matTwo
+    return outOne, outTwo
+
+
+# changes the shape of a smaller matrix to match a bigger one
+def makeSize(y, x, mat):
+    out = mat
+    if(np.shape(mat)[0] < y or np.shape(mat)[1] < x):
+        out = np.zeros((y, x), dtype=np.int)
+        offY = int((y-np.shape(mat)[0])/2)
+        offX = int((x-np.shape(mat)[1])/2)
+        farY = offY+np.shape(mat)[0]
+        farX = offX+np.shape(mat)[1]
+        out[offY:farY, offX:farX] = mat
+    return out
+
+
+# an overloaded library with multiple circles in multiple positions of
+# different radii
 def overloadLib(name, row, col, maxPix):
     maxRadius = int(min(row, col)/2)  # maximum radius to fit the picture
     inc = max(1, int(maxRadius/5))  # increments

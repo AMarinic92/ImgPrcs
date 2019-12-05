@@ -75,9 +75,9 @@ if trials < 1:
     if (proceed == "YES" or proceed == "y" or proceed == "Y"
        or proceed == "yes"):
         tDir = input('input test directory name')
-        imf.calcD(mat, maxPix, tDir)
+        il.adv_calcD(mat, maxPix, tDir)
         print("Testing entire image against each in library\n")
-        imf.calcD_all(mat, tDir)
+        # imf.calcD_all(mat, tDir)
 '''
 # This runs the difference calculations for each appropriate slice in each
 # trial one trial may have multiple slices taken from it
