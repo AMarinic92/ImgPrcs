@@ -33,8 +33,8 @@ In order to determine if an image contains a ball or not we need to determine wh
 | Golf-Ball-1.pgm   [5]	| Ball              	| Surrounded y lots of noise, Ball dose not blend into noise                                                   	|
 | Basketball-1.pgm [6] 	| Ball              	| Large ball, off centre, texture in ball, noise in image                                                 	|
 | Globe.pgm    [7]     	| Sphere(not ball)  	| Computer generated image like library, sphere but not a ball, reflection, most like a ball without being one 	|
-| Sunflower.pgm     	| Circular symmetry 	| Symmetry is round but edges are not close to round                                                           	|
-| CD-ROM.pgm        	| Circular symmetry 	| Perfect circle, Circle in circle, little noise                                                               	|
+| Sunflower.pgm   [8]	| Circular symmetry 	| Symmetry is round but edges are not close to round                                                           	|
+| CD-ROM.pgm      [9]  	| Circular symmetry 	| Perfect circle, Circle in circle, little noise                                                               	|
 | Ferret.pgm        	| Circular Symmetry 	| Circular symmetry, noisy symmetry like tennis ball                                                           	|
 | Bicycle.pgm       	| Circular Symmetry 	| Multiple circular objects, lots of noise in picture                                                          	|
 
@@ -53,13 +53,14 @@ Like the weighed calcD, this method has its advantages and drawbacks. Calculatin
 4. Kratochvil Petr (2019), *Colorful Play Balls*.[https://www.publicdomainpictures.net/pictures/30000/velka/colorful-play-balls.jpg](https://www.publicdomainpictures.net/pictures/30000/velka/colorful-play-balls.jpg)
 5. Brennan Paul (2019), *Golf Ball On Putting Green*. [https://publicdomainpictures.net/pictures/130000/velka/golf-ball-on-putting-green.jpg](https://publicdomainpictures.net/pictures/130000/velka/golf-ball-on-putting-green.jpg)
 6. Mallette Linnaea (2019), *Basketball In A Sand Box* [https://www.publicdomainpictures.net/pictures/120000/velka/basketball-in-a-sand-box.jpg](https://www.publicdomainpictures.net/pictures/120000/velka/basketball-in-a-sand-box.jpg)
-7. Stachowiak Kai (2019), *Glass Globe*
+7. Stachowiak Kai (2019), *Glass Globe*. [https://www.publicdomainpictures.net/pictures/150000/velka/glaskugel-weltkugel.jpg](https://www.publicdomainpictures.net/pictures/150000/velka/glaskugel-weltkugel.jpg)
+8. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MzU4NjIzNzQsLTY2NTM3MDM0NSwxOT
-g3MzM0NjA5LDE1NjY4OTc1Myw4Njk0ODQxMywxMDU0OTI5NjQ3
-LDEwMTk5MDI1NzQsMTk4NDMwMDg5MSwtMjY1MjkzNTU0LC0xMj
-A0NjExNTAyLC00MDI3MjU3ODQsLTE4NTQ4MDg2NzMsMTAwMTI5
-ODg2MywtMTM5MDE3MTM4NywtMjAxMDA3MDAyOCwtMTE5Mjc2Nz
-gwLDM2NzAwODkxNiwxMzcxMTEyODkxLDEwMTM5NjgzMTEsMjc2
-MzA5ODU1XX0=
+eyJoaXN0b3J5IjpbLTQxNDUyMzIxNiwtNjY1MzcwMzQ1LDE5OD
+czMzQ2MDksMTU2Njg5NzUzLDg2OTQ4NDEzLDEwNTQ5Mjk2NDcs
+MTAxOTkwMjU3NCwxOTg0MzAwODkxLC0yNjUyOTM1NTQsLTEyMD
+Q2MTE1MDIsLTQwMjcyNTc4NCwtMTg1NDgwODY3MywxMDAxMjk4
+ODYzLC0xMzkwMTcxMzg3LC0yMDEwMDcwMDI4LC0xMTkyNzY3OD
+AsMzY3MDA4OTE2LDEzNzExMTI4OTEsMTAxMzk2ODMxMSwyNzYz
+MDk4NTVdfQ==
 -->
