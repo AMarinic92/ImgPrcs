@@ -24,9 +24,9 @@ Calculating the difference between the input image and both the eigen matrix of 
 In order to determine if an image contains a ball or not we need to determine what is a ball and how is it different from other round objects. A series of p
 
 ## Table 1 - Tuning selection
-| Image Name        	| Type              	| Justifications                                                                                               	|
+| Image Name *[ref]*        	| Type              	| Justifications                                                                                               	|
 |-------------------	|-------------------	|--------------------------------------------------------------------------------------------------------------	|
-| Tennis-Ball-4.pgm 	| Ball              	| Multiple balls, Furry edges, Noise                                                                           	|
+| Tennis-Ball-4.pgm [1] 	| Ball              	| Multiple balls, Furry edges, Noise                                                                           	|
 | Baseball-1.pgm    	| Ball              	| Large single ball, Close to centre, Ball has texture                                                         	|
 |Soccer-Ball-1.pgm |Ball | Large, noisey inside and outside, takes up majority of image |
 | Rubber-Ball-7.pgm 	| Ball              	| Image is all balls, All balls are the same, All balls have clean edges                                       	|
@@ -47,12 +47,13 @@ We use a second library generator to aid the processing of calcD_all called find
 Like the weighed calcD, this method has its advantages and drawbacks. Calculating individual distances is a relatively quick method, and is very efficient if the test images has minimal detail and noise. The algorithm has the ability to bypass some faint background noise and noisy central details. However, some test images may still contain more bright noise which will generate a lot of library image files that consume space. Number of comparisons between test image and library images increase and will take more time. A major drawback of this method that the success of this function is extremely dependent on library circles being plotted very close to the size and position of the round object's edges in the test image. We remediated the function by allowing "zeroed-on" pixels to also test its neighbors. Circles that are considerably off-centre when a slice is taken will prove to be a problem. As only hypothetical, centered circles are drawn, assessing distances on other images may not be accurate and ball recognition may fail. The method worked best with single-test, huge, centered balls that fill the image.
  
 # References
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk3MDIzMzI2NCwxNTY2ODk3NTMsODY5ND
-g0MTMsMTA1NDkyOTY0NywxMDE5OTAyNTc0LDE5ODQzMDA4OTEs
-LTI2NTI5MzU1NCwtMTIwNDYxMTUwMiwtNDAyNzI1Nzg0LC0xOD
-U0ODA4NjczLDEwMDEyOTg4NjMsLTEzOTAxNzEzODcsLTIwMTAw
-NzAwMjgsLTExOTI3Njc4MCwzNjcwMDg5MTYsMTM3MTExMjg5MS
-wxMDEzOTY4MzExLDI3NjMwOTg1NSwtNDgzOTgzODc2LC0xNzIx
-NDA3OTU0XX0=
+eyJoaXN0b3J5IjpbMTE1Nzg3MzY2LDE1NjY4OTc1Myw4Njk0OD
+QxMywxMDU0OTI5NjQ3LDEwMTk5MDI1NzQsMTk4NDMwMDg5MSwt
+MjY1MjkzNTU0LC0xMjA0NjExNTAyLC00MDI3MjU3ODQsLTE4NT
+Q4MDg2NzMsMTAwMTI5ODg2MywtMTM5MDE3MTM4NywtMjAxMDA3
+MDAyOCwtMTE5Mjc2NzgwLDM2NzAwODkxNiwxMzcxMTEyODkxLD
+EwMTM5NjgzMTEsMjc2MzA5ODU1LC00ODM5ODM4NzYsLTE3MjE0
+MDc5NTRdfQ==
 -->
