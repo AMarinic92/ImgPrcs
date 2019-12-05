@@ -49,13 +49,14 @@ Like the weighed calcD, this method has its advantages and drawbacks. Calculatin
 # References
 1. Star Mark Andrew  (2019),  *Tennis Balls And Rackets*. [https://publicdomainpictures.net/pictures/230000/velka/palline-da-tennis-e-racchetta.jpg](https://publicdomainpictures.net/pictures/230000/velka/palline-da-tennis-e-racchetta.jpg)
 2. Siedlecki Piotr (2019), *Baseball Ball*.[https://publicdomainpictures.net/pictures/70000/velka/baseball-ball.jpg](https://publicdomainpictures.net/pictures/70000/velka/baseball-ball.jpg)
-3. Haroon Ahmad (2019), * *
+3. Haroon Ahmad (2019), *Fidato Soccer Ball*. [https://publicdomainpictures.net/pictures/90000/velka/fidato-soccer-ball.jpg](https://publicdomainpictures.net/pictures/90000/velka/fidato-soccer-ball.jpg)
+4. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwODQ4MDc3NDcsMTU2Njg5NzUzLDg2OT
-Q4NDEzLDEwNTQ5Mjk2NDcsMTAxOTkwMjU3NCwxOTg0MzAwODkx
-LC0yNjUyOTM1NTQsLTEyMDQ2MTE1MDIsLTQwMjcyNTc4NCwtMT
-g1NDgwODY3MywxMDAxMjk4ODYzLC0xMzkwMTcxMzg3LC0yMDEw
-MDcwMDI4LC0xMTkyNzY3ODAsMzY3MDA4OTE2LDEzNzExMTI4OT
-EsMTAxMzk2ODMxMSwyNzYzMDk4NTUsLTQ4Mzk4Mzg3NiwtMTcy
-MTQwNzk1NF19
+eyJoaXN0b3J5IjpbMTUzMDcyNDYwNywxNTY2ODk3NTMsODY5ND
+g0MTMsMTA1NDkyOTY0NywxMDE5OTAyNTc0LDE5ODQzMDA4OTEs
+LTI2NTI5MzU1NCwtMTIwNDYxMTUwMiwtNDAyNzI1Nzg0LC0xOD
+U0ODA4NjczLDEwMDEyOTg4NjMsLTEzOTAxNzEzODcsLTIwMTAw
+NzAwMjgsLTExOTI3Njc4MCwzNjcwMDg5MTYsMTM3MTExMjg5MS
+wxMDEzOTY4MzExLDI3NjMwOTg1NSwtNDgzOTgzODc2LC0xNzIx
+NDA3OTU0XX0=
 -->
