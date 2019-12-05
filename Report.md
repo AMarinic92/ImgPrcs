@@ -28,7 +28,7 @@ In order to determine if an image contains a ball or not we need to determine wh
 |-------------------	|-------------------	|--------------------------------------------------------------------------------------------------------------	|
 | Tennis-Ball-4.pgm [1] 	| Ball              	| Multiple balls, Furry edges, Noise                                                                           	|
 | Baseball-1.pgm [2]   	| Ball              	| Large single ball, Close to centre, Ball has texture                                                         	|
-|Soccer-Ball-1.pgm |Ball | Large, noisey inside and outside, takes up majority of image |
+|Soccer-Ball-1.pgm [3]|Ball | Large, noisey inside and outside, takes up majority of image |
 | Rubber-Ball-7.pgm 	| Ball              	| Image is all balls, All balls are the same, All balls have clean edges                                       	|
 | Golf-Ball-1.pgm   	| Ball              	| Surrounded y lots of noise, Ball dose not blend into noise                                                   	|
 | Basketball-1.pgm  	| Ball              	| Large ball, off centre, texture in ball, noise in image                                                 	|
@@ -49,13 +49,13 @@ Like the weighed calcD, this method has its advantages and drawbacks. Calculatin
 # References
 1. Star Mark Andrew  (2019),  *Tennis Balls And Rackets*. [https://publicdomainpictures.net/pictures/230000/velka/palline-da-tennis-e-racchetta.jpg](https://publicdomainpictures.net/pictures/230000/velka/palline-da-tennis-e-racchetta.jpg)
 2. Siedlecki Piotr (2019), *Baseball Ball*.[https://publicdomainpictures.net/pictures/70000/velka/baseball-ball.jpg](https://publicdomainpictures.net/pictures/70000/velka/baseball-ball.jpg)
-3. 
+3. Haroon Ahmad (2019), * *
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjI2NTEyNzI3LDE1NjY4OTc1Myw4Njk0OD
-QxMywxMDU0OTI5NjQ3LDEwMTk5MDI1NzQsMTk4NDMwMDg5MSwt
-MjY1MjkzNTU0LC0xMjA0NjExNTAyLC00MDI3MjU3ODQsLTE4NT
-Q4MDg2NzMsMTAwMTI5ODg2MywtMTM5MDE3MTM4NywtMjAxMDA3
-MDAyOCwtMTE5Mjc2NzgwLDM2NzAwODkxNiwxMzcxMTEyODkxLD
-EwMTM5NjgzMTEsMjc2MzA5ODU1LC00ODM5ODM4NzYsLTE3MjE0
-MDc5NTRdfQ==
+eyJoaXN0b3J5IjpbLTEwODQ4MDc3NDcsMTU2Njg5NzUzLDg2OT
+Q4NDEzLDEwNTQ5Mjk2NDcsMTAxOTkwMjU3NCwxOTg0MzAwODkx
+LC0yNjUyOTM1NTQsLTEyMDQ2MTE1MDIsLTQwMjcyNTc4NCwtMT
+g1NDgwODY3MywxMDAxMjk4ODYzLC0xMzkwMTcxMzg3LC0yMDEw
+MDcwMDI4LC0xMTkyNzY3ODAsMzY3MDA4OTE2LDEzNzExMTI4OT
+EsMTAxMzk2ODMxMSwyNzYzMDk4NTUsLTQ4Mzk4Mzg3NiwtMTcy
+MTQwNzk1NF19
 -->
