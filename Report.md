@@ -29,7 +29,7 @@ In order to determine if an image contains a ball or not we need to determine wh
 | Tennis-Ball-4.pgm [1] 	| Ball              	| Multiple balls, Furry edges, Noise                                                                           	|
 | Baseball-1.pgm [2]   	| Ball              	| Large single ball, Close to centre, Ball has texture                                                         	|
 |Soccer-Ball-1.pgm [3]|Ball | Large, noisey inside and outside, takes up majority of image |
-| Rubber-Ball-7.pgm 	| Ball              	| Image is all balls, All balls are the same, All balls have clean edges                                       	|
+| Rubber-Ball-7.pgm [4]	| Ball              	| Image is all balls, All balls are the same, All balls have clean edges                                       	|
 | Golf-Ball-1.pgm   	| Ball              	| Surrounded y lots of noise, Ball dose not blend into noise                                                   	|
 | Basketball-1.pgm  	| Ball              	| Large ball, off centre, texture in ball, noise in image                                                 	|
 | Globe.pgm         	| Sphere(not ball)  	| Computer generated image like library, sphere but not a ball, reflection, most like a ball without being one 	|
@@ -52,11 +52,11 @@ Like the weighed calcD, this method has its advantages and drawbacks. Calculatin
 3. Haroon Ahmad (2019), *Fidato Soccer Ball*. [https://publicdomainpictures.net/pictures/90000/velka/fidato-soccer-ball.jpg](https://publicdomainpictures.net/pictures/90000/velka/fidato-soccer-ball.jpg)
 4. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUzMDcyNDYwNywxNTY2ODk3NTMsODY5ND
-g0MTMsMTA1NDkyOTY0NywxMDE5OTAyNTc0LDE5ODQzMDA4OTEs
-LTI2NTI5MzU1NCwtMTIwNDYxMTUwMiwtNDAyNzI1Nzg0LC0xOD
-U0ODA4NjczLDEwMDEyOTg4NjMsLTEzOTAxNzEzODcsLTIwMTAw
-NzAwMjgsLTExOTI3Njc4MCwzNjcwMDg5MTYsMTM3MTExMjg5MS
-wxMDEzOTY4MzExLDI3NjMwOTg1NSwtNDgzOTgzODc2LC0xNzIx
-NDA3OTU0XX0=
+eyJoaXN0b3J5IjpbLTE1MzU0MjQyNTEsMTU2Njg5NzUzLDg2OT
+Q4NDEzLDEwNTQ5Mjk2NDcsMTAxOTkwMjU3NCwxOTg0MzAwODkx
+LC0yNjUyOTM1NTQsLTEyMDQ2MTE1MDIsLTQwMjcyNTc4NCwtMT
+g1NDgwODY3MywxMDAxMjk4ODYzLC0xMzkwMTcxMzg3LC0yMDEw
+MDcwMDI4LC0xMTkyNzY3ODAsMzY3MDA4OTE2LDEzNzExMTI4OT
+EsMTAxMzk2ODMxMSwyNzYzMDk4NTUsLTQ4Mzk4Mzg3NiwtMTcy
+MTQwNzk1NF19
 -->
