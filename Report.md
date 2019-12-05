@@ -57,13 +57,13 @@ Like the weighed calcD, this method has its advantages and drawbacks. Calculatin
 8. Kratochvil Petr (2019), *Sunflower*. [https://www.publicdomainpictures.net/pictures/10000/velka/_MG_3370.jpg](https://www.publicdomainpictures.net/pictures/10000/velka/_MG_3370.jpg)
 9. Shemesh Marina (2019), *Colored CD-ROM*. [https://www.publicdomainpictures.net/en/view-image.php?image=220142&picture=colored-cd-rom](https://www.publicdomainpictures.net/en/view-image.php?image=220142&picture=colored-cd-rom)
 10. Dokoupil Jiří (2019), *Ferret In A Ball*. [https://www.publicdomainpictures.net/pictures/30000/velka/fretka-v-klubicku.jpg](https://www.publicdomainpictures.net/pictures/30000/velka/fretka-v-klubicku.jpg)
-11. Denyer Circe 
+11.  Arnold Karen (2019), *Bicycle*. [https://www.publicdomainpictures.net/pictures/90000/velka/bicycle-1398536732m7w.jpg](https://www.publicdomainpictures.net/pictures/90000/velka/bicycle-1398536732m7w.jpg)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc2MDQwODUxOCwtNjY1MzcwMzQ1LDE5OD
-czMzQ2MDksMTU2Njg5NzUzLDg2OTQ4NDEzLDEwNTQ5Mjk2NDcs
-MTAxOTkwMjU3NCwxOTg0MzAwODkxLC0yNjUyOTM1NTQsLTEyMD
-Q2MTE1MDIsLTQwMjcyNTc4NCwtMTg1NDgwODY3MywxMDAxMjk4
-ODYzLC0xMzkwMTcxMzg3LC0yMDEwMDcwMDI4LC0xMTkyNzY3OD
-AsMzY3MDA4OTE2LDEzNzExMTI4OTEsMTAxMzk2ODMxMSwyNzYz
-MDk4NTVdfQ==
+eyJoaXN0b3J5IjpbLTEyNzIzMDExODUsLTY2NTM3MDM0NSwxOT
+g3MzM0NjA5LDE1NjY4OTc1Myw4Njk0ODQxMywxMDU0OTI5NjQ3
+LDEwMTk5MDI1NzQsMTk4NDMwMDg5MSwtMjY1MjkzNTU0LC0xMj
+A0NjExNTAyLC00MDI3MjU3ODQsLTE4NTQ4MDg2NzMsMTAwMTI5
+ODg2MywtMTM5MDE3MTM4NywtMjAxMDA3MDAyOCwtMTE5Mjc2Nz
+gwLDM2NzAwODkxNiwxMzcxMTEyODkxLDEwMTM5NjgzMTEsMjc2
+MzA5ODU1XX0=
 -->
