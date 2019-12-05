@@ -40,11 +40,11 @@ In order to determine if an image contains a ball or not we need to determine wh
 
 
 
-Apart from getting the weighted distances, we would want to derive a test image's distance from each individual library image as well. For that, we implemented a `calcD_all` *(Andrea)* function, which gathers all the images in a library directory, and calls `calcD_single` *(Andrea)* to test the test slice against each library image. If one of tests return a passing score of above 80 percent, the function attests that ball is found. If all of the tests fail, the function will attest that there is no ball in the slice. In general, calcD_single assesses the percentage of the completion of a circle. Where a pixel in the library image is found, the test image is tested for a pixel in the same region and if it exceeds the cut-off for what would be considered an edge in pixel value, it becomes valid point in the circumference and the test score is increased.
+Apart from getting the weighted distances, we would want to derive a test image's distance from each individual library image as well. For that, we implemented a `calcD_all` *(Andrea)* function, which gathers all the images in a library directory, and calls `calcD_single` *(Andrea)* to test the test slice against each library image. If one of tests return a passing score of above 80 percent, the function attests that ball is found. If all of the tests fail, the function will attest that there is no ball in the slice. In general, `calcD_single` assesses the percentage of the completion of a circle. Where a pixel in the library image is found, the test image is tested for a pixel in the same region and if it exceeds the cut-off for what would be considered an edge in pixel value, it becomes valid point in the circumference and the test score is increased.
 
-We use a second library generator to aid the processing of calcD_all called find_radii *(Andrea)*. This function gets the approximate locations of circles in an image and generates a library of images to hypothetically match that circle. The function probes across a horizontal strip from the centre edge to the centre or a vertical strip from the top edge to the centre and searches for relatively whiter pixels which could signal the edge of a ball. The function then calls another version of makeCircle *(Andrea)*. Given the dimensions of a test array, the function calculates the center and for every half degree, plots a white point to form the outline of the circle.
+We use a second library generator to aid the processing of calcD_all called find_radii *(Andrea)*. This function gets the approximate locations of circles in an image and generates a library of images to hypothetically match that circle. The function probes across a horizontal strip from the centre edge to the centre or a vertical strip from the top edge to the centre and searches for relatively whiter pixels which could signal the edge of a ball. The function then calls another version of makeCircle *(Andrea)*. Given the dimensions of a test array, the function calculates the centre and for every half degree, plots a white point to form the outline of the circle.
 
-Like the weighed calcD, this method has its advantages and drawbacks. Calculating individual distances is a relatively quick method, and is very efficient if the test images has minimal detail and noise. The algorithm has the ability to bypass some faint background noise and noisy central details. However, some test images may still contain more bright noise which will generate a lot of library image files that consume space. Number of comparisons between test image and library images increase and will take more time. A major drawback of this method that the success of this function is extremely dependent on library circles being plotted very close to the size and position of the round object's edges in the test image. We remediated the function by allowing "zeroed-on" pixels to also test its neighbors. Circles that are considerably off-centre when a slice is taken will prove to be a problem. As only hypothetical, centered circles are drawn, assessing distances on other images may not be accurate and ball recognition may fail. The method worked best with single-test, huge, centered balls that fill the image.
+Like the weighed calcD, this method has its advantages and drawbacks. Calculating individual distances is a relatively quick method, and is very efficient if the test images has minimal detail and noise. The algorithm has the ability to bypass some faint background noise and noisy central details. However, some test images may still contain more bright noise which will generate a lot of library image files that consume space. Number of comparisons between test image and library images increase and will take more time. A major drawback of this method that the success of this function is extremely dependent on library circles being plotted very close to the size and position of the round object's edges in the test image. We remediated the function by allowing "zeroed-on" pixels to also test its neighbours. Circles that are considerably off-centre when a slice is taken will prove to be a problem. As only hypothetical, centred circles are drawn, assessing distances on other images may not be accurate and ball recognition may fail. The method worked best with single-test, huge, centred balls that fill the image.
  
 # References
 1. Star Mark Andrew  (2019),  *Tennis Balls And Rackets*. [https://publicdomainpictures.net/pictures/230000/velka/palline-da-tennis-e-racchetta.jpg](https://publicdomainpictures.net/pictures/230000/velka/palline-da-tennis-e-racchetta.jpg)
@@ -55,13 +55,14 @@ Like the weighed calcD, this method has its advantages and drawbacks. Calculatin
 6. Mallette Linnaea (2019), *Basketball In A Sand Box* [https://www.publicdomainpictures.net/pictures/120000/velka/basketball-in-a-sand-box.jpg](https://www.publicdomainpictures.net/pictures/120000/velka/basketball-in-a-sand-box.jpg)
 7. Stachowiak Kai (2019), *Glass Globe*. [https://www.publicdomainpictures.net/pictures/150000/velka/glaskugel-weltkugel.jpg](https://www.publicdomainpictures.net/pictures/150000/velka/glaskugel-weltkugel.jpg)
 8. Kratochvil Petr (2019), *Sunflower*. [https://www.publicdomainpictures.net/pictures/10000/velka/_MG_3370.jpg](https://www.publicdomainpictures.net/pictures/10000/velka/_MG_3370.jpg)
-9. Shemesh Marina (2019), *# Colored CD-ROM*
+9. Shemesh Marina (2019), *Colored CD-ROM*. [https://www.publicdomainpictures.net/en/view-image.php?image=220142&picture=colored-cd-rom](https://www.publicdomainpictures.net/en/view-image.php?image=220142&picture=colored-cd-rom)
+10. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMwMTE0NzQ4NSwtNjY1MzcwMzQ1LDE5OD
-czMzQ2MDksMTU2Njg5NzUzLDg2OTQ4NDEzLDEwNTQ5Mjk2NDcs
-MTAxOTkwMjU3NCwxOTg0MzAwODkxLC0yNjUyOTM1NTQsLTEyMD
-Q2MTE1MDIsLTQwMjcyNTc4NCwtMTg1NDgwODY3MywxMDAxMjk4
-ODYzLC0xMzkwMTcxMzg3LC0yMDEwMDcwMDI4LC0xMTkyNzY3OD
-AsMzY3MDA4OTE2LDEzNzExMTI4OTEsMTAxMzk2ODMxMSwyNzYz
-MDk4NTVdfQ==
+eyJoaXN0b3J5IjpbOTgxNTM1MjA3LC02NjUzNzAzNDUsMTk4Nz
+MzNDYwOSwxNTY2ODk3NTMsODY5NDg0MTMsMTA1NDkyOTY0Nywx
+MDE5OTAyNTc0LDE5ODQzMDA4OTEsLTI2NTI5MzU1NCwtMTIwND
+YxMTUwMiwtNDAyNzI1Nzg0LC0xODU0ODA4NjczLDEwMDEyOTg4
+NjMsLTEzOTAxNzEzODcsLTIwMTAwNzAwMjgsLTExOTI3Njc4MC
+wzNjcwMDg5MTYsMTM3MTExMjg5MSwxMDEzOTY4MzExLDI3NjMw
+OTg1NV19
 -->
