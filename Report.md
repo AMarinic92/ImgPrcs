@@ -36,7 +36,7 @@ In order to determine if an image contains a ball or not we need to determine wh
 | Sunflower.pgm   [8]	| Circular symmetry 	| Symmetry is round but edges are not close to round                                                           	|
 | CD-ROM.pgm      [9]  	| Circular symmetry 	| Perfect circle, Circle in circle, little noise                                                               	|
 | Ferret.pgm        [10]	| Circular Symmetry 	| Circular symmetry, noisy symmetry like tennis ball                                                           	|
-| Bicycle.pgm       	| Circular Symmetry 	| Multiple circular objects, lots of noise in picture                                                          	|
+| Bicycle.pgm    [11]   	| Circular Symmetry 	| Multiple circular objects, lots of noise in picture                                                          	|
 
 
 
@@ -56,13 +56,13 @@ Like the weighed calcD, this method has its advantages and drawbacks. Calculatin
 7. Stachowiak Kai (2019), *Glass Globe*. [https://www.publicdomainpictures.net/pictures/150000/velka/glaskugel-weltkugel.jpg](https://www.publicdomainpictures.net/pictures/150000/velka/glaskugel-weltkugel.jpg)
 8. Kratochvil Petr (2019), *Sunflower*. [https://www.publicdomainpictures.net/pictures/10000/velka/_MG_3370.jpg](https://www.publicdomainpictures.net/pictures/10000/velka/_MG_3370.jpg)
 9. Shemesh Marina (2019), *Colored CD-ROM*. [https://www.publicdomainpictures.net/en/view-image.php?image=220142&picture=colored-cd-rom](https://www.publicdomainpictures.net/en/view-image.php?image=220142&picture=colored-cd-rom)
-10. 
+10. Dokoupil Jiří (2019), *Ferret In A Ball*. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUyNTA0NDYzNiwtNjY1MzcwMzQ1LDE5OD
-czMzQ2MDksMTU2Njg5NzUzLDg2OTQ4NDEzLDEwNTQ5Mjk2NDcs
-MTAxOTkwMjU3NCwxOTg0MzAwODkxLC0yNjUyOTM1NTQsLTEyMD
-Q2MTE1MDIsLTQwMjcyNTc4NCwtMTg1NDgwODY3MywxMDAxMjk4
-ODYzLC0xMzkwMTcxMzg3LC0yMDEwMDcwMDI4LC0xMTkyNzY3OD
-AsMzY3MDA4OTE2LDEzNzExMTI4OTEsMTAxMzk2ODMxMSwyNzYz
-MDk4NTVdfQ==
+eyJoaXN0b3J5IjpbLTg1OTg5OTY2LC02NjUzNzAzNDUsMTk4Nz
+MzNDYwOSwxNTY2ODk3NTMsODY5NDg0MTMsMTA1NDkyOTY0Nywx
+MDE5OTAyNTc0LDE5ODQzMDA4OTEsLTI2NTI5MzU1NCwtMTIwND
+YxMTUwMiwtNDAyNzI1Nzg0LC0xODU0ODA4NjczLDEwMDEyOTg4
+NjMsLTEzOTAxNzEzODcsLTIwMTAwNzAwMjgsLTExOTI3Njc4MC
+wzNjcwMDg5MTYsMTM3MTExMjg5MSwxMDEzOTY4MzExLDI3NjMw
+OTg1NV19
 -->
