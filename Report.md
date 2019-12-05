@@ -58,9 +58,10 @@ Like the weighed calcD, this method has its advantages and drawbacks. Calculatin
 9. Shemesh Marina (2019), *Colored CD-ROM*. [https://www.publicdomainpictures.net/en/view-image.php?image=220142&picture=colored-cd-rom](https://www.publicdomainpictures.net/en/view-image.php?image=220142&picture=colored-cd-rom)
 10. Dokoupil Jiří (2019), *Ferret In A Ball*. [https://www.publicdomainpictures.net/pictures/30000/velka/fretka-v-klubicku.jpg](https://www.publicdomainpictures.net/pictures/30000/velka/fretka-v-klubicku.jpg)
 11.  Arnold Karen (2019), *Bicycle*. [https://www.publicdomainpictures.net/pictures/90000/velka/bicycle-1398536732m7w.jpg](https://www.publicdomainpictures.net/pictures/90000/velka/bicycle-1398536732m7w.jpg)
-12. Vaughan, Jennifer. “Section 4: Gradients and Edges” Science 2000: Image Processing, Oct 8 - 11 , U Manitoba, Winnipeg.
+12. Vaughan, Jennifer. “Section 4: Gradients and Edges” Science 2000: Image Processing, Oct 8 - 14 2019, U Manitoba, Winnipeg.
+13.  Vaughan, Jennifer. “Section 5: Facial Recognition” Science 2000: Image Processing, Oct 8 - 11 2019, U Manitoba, Winnipeg.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU5NDExMzU4MywtMTI3MjMwMTE4NSwtNj
+eyJoaXN0b3J5IjpbMTU1NjI3NzM4MywtMTI3MjMwMTE4NSwtNj
 Y1MzcwMzQ1LDE5ODczMzQ2MDksMTU2Njg5NzUzLDg2OTQ4NDEz
 LDEwNTQ5Mjk2NDcsMTAxOTkwMjU3NCwxOTg0MzAwODkxLC0yNj
 UyOTM1NTQsLTEyMDQ2MTE1MDIsLTQwMjcyNTc4NCwtMTg1NDgw
