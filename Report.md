@@ -60,13 +60,13 @@ Like the weighed calcD, this method has its advantages and drawbacks. Calculatin
 11.  Arnold Karen (2019), *Bicycle*. [https://www.publicdomainpictures.net/pictures/90000/velka/bicycle-1398536732m7w.jpg](https://www.publicdomainpictures.net/pictures/90000/velka/bicycle-1398536732m7w.jpg)
 12. Vaughan, Jennifer. “Section 4: Gradients and Edges” Science 2000: Image Processing, Oct 8 - 14? 2019, U Manitoba, Winnipeg.
 13.  Vaughan, Jennifer. “Section 5: Facial Recognition” Science 2000: Image Processing, Oct 16- 31? 2019, U Manitoba, Winnipeg.
-14. Vaughan, Jennifer. _Title_. City: Publisher, Year Published
+14. Vaughan, Jennifer. *GenerateFaces.py*. Winnipeg, 2019
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2OTQ0ODE1NywtMTI3MjMwMTE4NSwtNj
-Y1MzcwMzQ1LDE5ODczMzQ2MDksMTU2Njg5NzUzLDg2OTQ4NDEz
-LDEwNTQ5Mjk2NDcsMTAxOTkwMjU3NCwxOTg0MzAwODkxLC0yNj
-UyOTM1NTQsLTEyMDQ2MTE1MDIsLTQwMjcyNTc4NCwtMTg1NDgw
-ODY3MywxMDAxMjk4ODYzLC0xMzkwMTcxMzg3LC0yMDEwMDcwMD
-I4LC0xMTkyNzY3ODAsMzY3MDA4OTE2LDEzNzExMTI4OTEsMTAx
-Mzk2ODMxMV19
+eyJoaXN0b3J5IjpbLTEwMTkzNTAyNjgsLTEyNzIzMDExODUsLT
+Y2NTM3MDM0NSwxOTg3MzM0NjA5LDE1NjY4OTc1Myw4Njk0ODQx
+MywxMDU0OTI5NjQ3LDEwMTk5MDI1NzQsMTk4NDMwMDg5MSwtMj
+Y1MjkzNTU0LC0xMjA0NjExNTAyLC00MDI3MjU3ODQsLTE4NTQ4
+MDg2NzMsMTAwMTI5ODg2MywtMTM5MDE3MTM4NywtMjAxMDA3MD
+AyOCwtMTE5Mjc2NzgwLDM2NzAwODkxNiwxMzcxMTEyODkxLDEw
+MTM5NjgzMTFdfQ==
 -->
