@@ -30,7 +30,7 @@ In order to determine if an image contains a ball or not we need to determine wh
 | Baseball-1.pgm [2]   	| Ball              	| Large single ball, Close to centre, Ball has texture                                                         	|
 |Soccer-Ball-1.pgm [3]|Ball | Large, noisey inside and outside, takes up majority of image |
 | Rubber-Ball-7.pgm [4]	| Ball              	| Image is all balls, All balls are the same, All balls have clean edges                                       	|
-| Golf-Ball-1.pgm   	| Ball              	| Surrounded y lots of noise, Ball dose not blend into noise                                                   	|
+| Golf-Ball-1.pgm   [5]	| Ball              	| Surrounded y lots of noise, Ball dose not blend into noise                                                   	|
 | Basketball-1.pgm  	| Ball              	| Large ball, off centre, texture in ball, noise in image                                                 	|
 | Globe.pgm         	| Sphere(not ball)  	| Computer generated image like library, sphere but not a ball, reflection, most like a ball without being one 	|
 | Sunflower.pgm     	| Circular symmetry 	| Symmetry is round but edges are not close to round                                                           	|
@@ -50,13 +50,14 @@ Like the weighed calcD, this method has its advantages and drawbacks. Calculatin
 1. Star Mark Andrew  (2019),  *Tennis Balls And Rackets*. [https://publicdomainpictures.net/pictures/230000/velka/palline-da-tennis-e-racchetta.jpg](https://publicdomainpictures.net/pictures/230000/velka/palline-da-tennis-e-racchetta.jpg)
 2. Siedlecki Piotr (2019), *Baseball Ball*.[https://publicdomainpictures.net/pictures/70000/velka/baseball-ball.jpg](https://publicdomainpictures.net/pictures/70000/velka/baseball-ball.jpg)
 3. Haroon Ahmad (2019), *Fidato Soccer Ball*. [https://publicdomainpictures.net/pictures/90000/velka/fidato-soccer-ball.jpg](https://publicdomainpictures.net/pictures/90000/velka/fidato-soccer-ball.jpg)
-4. Kratochvil Petr (2019), *# Colorful Play Balls*
+4. Kratochvil Petr (2019), *Colorful Play Balls*.[https://www.publicdomainpictures.net/pictures/30000/velka/colorful-play-balls.jpg](https://www.publicdomainpictures.net/pictures/30000/velka/colorful-play-balls.jpg)
+5. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDYxMTg1ODk1LDE1NjY4OTc1Myw4Njk0OD
-QxMywxMDU0OTI5NjQ3LDEwMTk5MDI1NzQsMTk4NDMwMDg5MSwt
-MjY1MjkzNTU0LC0xMjA0NjExNTAyLC00MDI3MjU3ODQsLTE4NT
-Q4MDg2NzMsMTAwMTI5ODg2MywtMTM5MDE3MTM4NywtMjAxMDA3
-MDAyOCwtMTE5Mjc2NzgwLDM2NzAwODkxNiwxMzcxMTEyODkxLD
-EwMTM5NjgzMTEsMjc2MzA5ODU1LC00ODM5ODM4NzYsLTE3MjE0
-MDc5NTRdfQ==
+eyJoaXN0b3J5IjpbMTk4NzMzNDYwOSwxNTY2ODk3NTMsODY5ND
+g0MTMsMTA1NDkyOTY0NywxMDE5OTAyNTc0LDE5ODQzMDA4OTEs
+LTI2NTI5MzU1NCwtMTIwNDYxMTUwMiwtNDAyNzI1Nzg0LC0xOD
+U0ODA4NjczLDEwMDEyOTg4NjMsLTEzOTAxNzEzODcsLTIwMTAw
+NzAwMjgsLTExOTI3Njc4MCwzNjcwMDg5MTYsMTM3MTExMjg5MS
+wxMDEzOTY4MzExLDI3NjMwOTg1NSwtNDgzOTgzODc2LC0xNzIx
+NDA3OTU0XX0=
 -->
