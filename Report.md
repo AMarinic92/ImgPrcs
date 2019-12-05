@@ -51,15 +51,15 @@ Like the weighed calcD, this method has its advantages and drawbacks. Calculatin
 2. Siedlecki Piotr (2019), *Baseball Ball*.[https://publicdomainpictures.net/pictures/70000/velka/baseball-ball.jpg](https://publicdomainpictures.net/pictures/70000/velka/baseball-ball.jpg)
 3. Haroon Ahmad (2019), *Fidato Soccer Ball*. [https://publicdomainpictures.net/pictures/90000/velka/fidato-soccer-ball.jpg](https://publicdomainpictures.net/pictures/90000/velka/fidato-soccer-ball.jpg)
 4. Kratochvil Petr (2019), *Colorful Play Balls*.[https://www.publicdomainpictures.net/pictures/30000/velka/colorful-play-balls.jpg](https://www.publicdomainpictures.net/pictures/30000/velka/colorful-play-balls.jpg)
-5. Brennan Paul (2019) *Golf Ball On Putting Green*. [https://publicdomainpictures.net/pictures/130000/velka/golf-ball-on-putting-green.jpg](https://publicdomainpictures.net/pictures/130000/velka/golf-ball-on-putting-green.jpg)
-6. Mallette Linnaea (2019) *Basketball In A Sand Box* [https://www.publicdomainpictures.net/pictures/120000/velka/basketball-in-a-sand-box.jpg](https://www.publicdomainpictures.net/pictures/120000/velka/basketball-in-a-sand-box.jpg)
-7. 
+5. Brennan Paul (2019), *Golf Ball On Putting Green*. [https://publicdomainpictures.net/pictures/130000/velka/golf-ball-on-putting-green.jpg](https://publicdomainpictures.net/pictures/130000/velka/golf-ball-on-putting-green.jpg)
+6. Mallette Linnaea (2019), *Basketball In A Sand Box* [https://www.publicdomainpictures.net/pictures/120000/velka/basketball-in-a-sand-box.jpg](https://www.publicdomainpictures.net/pictures/120000/velka/basketball-in-a-sand-box.jpg)
+7. Stachowiak Kai (2019), *Glass Globe*
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzgwMzg3NzU1LC02NjUzNzAzNDUsMTk4Nz
-MzNDYwOSwxNTY2ODk3NTMsODY5NDg0MTMsMTA1NDkyOTY0Nywx
-MDE5OTAyNTc0LDE5ODQzMDA4OTEsLTI2NTI5MzU1NCwtMTIwND
-YxMTUwMiwtNDAyNzI1Nzg0LC0xODU0ODA4NjczLDEwMDEyOTg4
-NjMsLTEzOTAxNzEzODcsLTIwMTAwNzAwMjgsLTExOTI3Njc4MC
-wzNjcwMDg5MTYsMTM3MTExMjg5MSwxMDEzOTY4MzExLDI3NjMw
-OTg1NV19
+eyJoaXN0b3J5IjpbLTE1MzU4NjIzNzQsLTY2NTM3MDM0NSwxOT
+g3MzM0NjA5LDE1NjY4OTc1Myw4Njk0ODQxMywxMDU0OTI5NjQ3
+LDEwMTk5MDI1NzQsMTk4NDMwMDg5MSwtMjY1MjkzNTU0LC0xMj
+A0NjExNTAyLC00MDI3MjU3ODQsLTE4NTQ4MDg2NzMsMTAwMTI5
+ODg2MywtMTM5MDE3MTM4NywtMjAxMDA3MDAyOCwtMTE5Mjc2Nz
+gwLDM2NzAwODkxNiwxMzcxMTEyODkxLDEwMTM5NjgzMTEsMjc2
+MzA5ODU1XX0=
 -->
