@@ -58,13 +58,13 @@ Like the weighed calcD, this method has its advantages and drawbacks. Calculatin
 9. Shemesh Marina (2019), *Colored CD-ROM*. [https://www.publicdomainpictures.net/en/view-image.php?image=220142&picture=colored-cd-rom](https://www.publicdomainpictures.net/en/view-image.php?image=220142&picture=colored-cd-rom)
 10. Dokoupil Jiří (2019), *Ferret In A Ball*. [https://www.publicdomainpictures.net/pictures/30000/velka/fretka-v-klubicku.jpg](https://www.publicdomainpictures.net/pictures/30000/velka/fretka-v-klubicku.jpg)
 11.  Arnold Karen (2019), *Bicycle*. [https://www.publicdomainpictures.net/pictures/90000/velka/bicycle-1398536732m7w.jpg](https://www.publicdomainpictures.net/pictures/90000/velka/bicycle-1398536732m7w.jpg)
-12. Vaughan, Jennifer. “Section 4: Gradients and Edges” Course or Event Name, Date, Venue, City. Descriptive label.
+12. Vaughan, Jennifer. “Section 4: Gradients and Edges” Science 2000: Image Processing, Date, U Manitoba, Winnipeg.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2Mzc0MDEzNTIsLTEyNzIzMDExODUsLT
-Y2NTM3MDM0NSwxOTg3MzM0NjA5LDE1NjY4OTc1Myw4Njk0ODQx
-MywxMDU0OTI5NjQ3LDEwMTk5MDI1NzQsMTk4NDMwMDg5MSwtMj
-Y1MjkzNTU0LC0xMjA0NjExNTAyLC00MDI3MjU3ODQsLTE4NTQ4
-MDg2NzMsMTAwMTI5ODg2MywtMTM5MDE3MTM4NywtMjAxMDA3MD
-AyOCwtMTE5Mjc2NzgwLDM2NzAwODkxNiwxMzcxMTEyODkxLDEw
-MTM5NjgzMTFdfQ==
+eyJoaXN0b3J5IjpbMzQ0NzkyNzQsLTEyNzIzMDExODUsLTY2NT
+M3MDM0NSwxOTg3MzM0NjA5LDE1NjY4OTc1Myw4Njk0ODQxMywx
+MDU0OTI5NjQ3LDEwMTk5MDI1NzQsMTk4NDMwMDg5MSwtMjY1Mj
+kzNTU0LC0xMjA0NjExNTAyLC00MDI3MjU3ODQsLTE4NTQ4MDg2
+NzMsMTAwMTI5ODg2MywtMTM5MDE3MTM4NywtMjAxMDA3MDAyOC
+wtMTE5Mjc2NzgwLDM2NzAwODkxNiwxMzcxMTEyODkxLDEwMTM5
+NjgzMTFdfQ==
 -->
