@@ -52,13 +52,13 @@ Like the weighed calcD, this method has its advantages and drawbacks. Calculatin
 3. Haroon Ahmad (2019), *Fidato Soccer Ball*. [https://publicdomainpictures.net/pictures/90000/velka/fidato-soccer-ball.jpg](https://publicdomainpictures.net/pictures/90000/velka/fidato-soccer-ball.jpg)
 4. Kratochvil Petr (2019), *Colorful Play Balls*.[https://www.publicdomainpictures.net/pictures/30000/velka/colorful-play-balls.jpg](https://www.publicdomainpictures.net/pictures/30000/velka/colorful-play-balls.jpg)
 5. Brennan Paul (2019) *Golf Ball On Putting Green*. [https://publicdomainpictures.net/pictures/130000/velka/golf-ball-on-putting-green.jpg](https://publicdomainpictures.net/pictures/130000/velka/golf-ball-on-putting-green.jpg)
- Mallette Linnaea (2019) *Basketball In A Sand Box* [https://www.publicdomainpictures.net/pictures/120000/velka/basketball-in-a-sand-box.jpg](https://www.publicdomainpictures.net/pictures/120000/velka/basketball-in-a-sand-box.jpg)
+6. Mallette Linnaea (2019) *Basketball In A Sand Box* [https://www.publicdomainpictures.net/pictures/120000/velka/basketball-in-a-sand-box.jpg](https://www.publicdomainpictures.net/pictures/120000/velka/basketball-in-a-sand-box.jpg)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY2NTM3MDM0NSwxOTg3MzM0NjA5LDE1Nj
-Y4OTc1Myw4Njk0ODQxMywxMDU0OTI5NjQ3LDEwMTk5MDI1NzQs
-MTk4NDMwMDg5MSwtMjY1MjkzNTU0LC0xMjA0NjExNTAyLC00MD
-I3MjU3ODQsLTE4NTQ4MDg2NzMsMTAwMTI5ODg2MywtMTM5MDE3
-MTM4NywtMjAxMDA3MDAyOCwtMTE5Mjc2NzgwLDM2NzAwODkxNi
-wxMzcxMTEyODkxLDEwMTM5NjgzMTEsMjc2MzA5ODU1LC00ODM5
-ODM4NzZdfQ==
+eyJoaXN0b3J5IjpbLTM2NDg4MDczNywtNjY1MzcwMzQ1LDE5OD
+czMzQ2MDksMTU2Njg5NzUzLDg2OTQ4NDEzLDEwNTQ5Mjk2NDcs
+MTAxOTkwMjU3NCwxOTg0MzAwODkxLC0yNjUyOTM1NTQsLTEyMD
+Q2MTE1MDIsLTQwMjcyNTc4NCwtMTg1NDgwODY3MywxMDAxMjk4
+ODYzLC0xMzkwMTcxMzg3LC0yMDEwMDcwMDI4LC0xMTkyNzY3OD
+AsMzY3MDA4OTE2LDEzNzExMTI4OTEsMTAxMzk2ODMxMSwyNzYz
+MDk4NTVdfQ==
 -->
