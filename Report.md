@@ -32,7 +32,7 @@ In order to determine if an image contains a ball or not we need to determine wh
 | Rubber-Ball-7.pgm [4]	| Ball              	| Image is all balls, All balls are the same, All balls have clean edges                                       	|
 | Golf-Ball-1.pgm   [5]	| Ball              	| Surrounded y lots of noise, Ball dose not blend into noise                                                   	|
 | Basketball-1.pgm [6] 	| Ball              	| Large ball, off centre, texture in ball, noise in image                                                 	|
-| Globe.pgm         	| Sphere(not ball)  	| Computer generated image like library, sphere but not a ball, reflection, most like a ball without being one 	|
+| Globe.pgm    [7]     	| Sphere(not ball)  	| Computer generated image like library, sphere but not a ball, reflection, most like a ball without being one 	|
 | Sunflower.pgm     	| Circular symmetry 	| Symmetry is round but edges are not close to round                                                           	|
 | CD-ROM.pgm        	| Circular symmetry 	| Perfect circle, Circle in circle, little noise                                                               	|
 | Ferret.pgm        	| Circular Symmetry 	| Circular symmetry, noisy symmetry like tennis ball                                                           	|
@@ -53,12 +53,13 @@ Like the weighed calcD, this method has its advantages and drawbacks. Calculatin
 4. Kratochvil Petr (2019), *Colorful Play Balls*.[https://www.publicdomainpictures.net/pictures/30000/velka/colorful-play-balls.jpg](https://www.publicdomainpictures.net/pictures/30000/velka/colorful-play-balls.jpg)
 5. Brennan Paul (2019) *Golf Ball On Putting Green*. [https://publicdomainpictures.net/pictures/130000/velka/golf-ball-on-putting-green.jpg](https://publicdomainpictures.net/pictures/130000/velka/golf-ball-on-putting-green.jpg)
 6. Mallette Linnaea (2019) *Basketball In A Sand Box* [https://www.publicdomainpictures.net/pictures/120000/velka/basketball-in-a-sand-box.jpg](https://www.publicdomainpictures.net/pictures/120000/velka/basketball-in-a-sand-box.jpg)
+7. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM2NDg4MDczNywtNjY1MzcwMzQ1LDE5OD
-czMzQ2MDksMTU2Njg5NzUzLDg2OTQ4NDEzLDEwNTQ5Mjk2NDcs
-MTAxOTkwMjU3NCwxOTg0MzAwODkxLC0yNjUyOTM1NTQsLTEyMD
-Q2MTE1MDIsLTQwMjcyNTc4NCwtMTg1NDgwODY3MywxMDAxMjk4
-ODYzLC0xMzkwMTcxMzg3LC0yMDEwMDcwMDI4LC0xMTkyNzY3OD
-AsMzY3MDA4OTE2LDEzNzExMTI4OTEsMTAxMzk2ODMxMSwyNzYz
-MDk4NTVdfQ==
+eyJoaXN0b3J5IjpbMzgwMzg3NzU1LC02NjUzNzAzNDUsMTk4Nz
+MzNDYwOSwxNTY2ODk3NTMsODY5NDg0MTMsMTA1NDkyOTY0Nywx
+MDE5OTAyNTc0LDE5ODQzMDA4OTEsLTI2NTI5MzU1NCwtMTIwND
+YxMTUwMiwtNDAyNzI1Nzg0LC0xODU0ODA4NjczLDEwMDEyOTg4
+NjMsLTEzOTAxNzEzODcsLTIwMTAwNzAwMjgsLTExOTI3Njc4MC
+wzNjcwMDg5MTYsMTM3MTExMjg5MSwxMDEzOTY4MzExLDI3NjMw
+OTg1NV19
 -->
