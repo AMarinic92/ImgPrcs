@@ -31,7 +31,7 @@ In order to determine if an image contains a ball or not we need to determine wh
 |Soccer-Ball-1.pgm |Ball | Large, noisey inside and outside, takes up majority of image |
 | Rubber-Ball-7.pgm 	| Ball              	| Image is all balls, All balls are the same, All balls have clean edges                                       	|
 | Golf-Ball-1.pgm   	| Ball              	| Surrounded y lots of noise, Ball dose not blend into noise                                                   	|
-| Basketball-1.pgm  	| Ball              	| Large ball, off centre, texture in ball, noise in image                                                      	|
+| Basketball-1.pgm  	| Ball              	| Large ball, off centre, texture in ball, noise in image                                                 	|
 | Globe.pgm         	| Sphere(not ball)  	| Computer generated image like library, sphere but not a ball, reflection, most like a ball without being one 	|
 | Sunflower.pgm     	| Circular symmetry 	| Symmetry is round but edges are not close to round                                                           	|
 | CD-ROM.pgm        	| Circular symmetry 	| Perfect circle, Circle in circle, little noise                                                               	|
@@ -46,13 +46,13 @@ We use a second library generator to aid the processing of calcD_all called find
 
 Like the weighed calcD, this method has its advantages and drawbacks. Calculating individual distances is a relatively quick method, and is very efficient if the test images has minimal detail and noise. The algorithm has the ability to bypass some faint background noise and noisy central details. However, some test images may still contain more bright noise which will generate a lot of library image files that consume space. Number of comparisons between test image and library images increase and will take more time. A major drawback of this method that the success of this function is extremely dependent on library circles being plotted very close to the size and position of the round object's edges in the test image. We remediated the function by allowing "zeroed-on" pixels to also test its neighbors. Circles that are considerably off-centre when a slice is taken will prove to be a problem. As only hypothetical, centered circles are drawn, assessing distances on other images may not be accurate and ball recognition may fail. The method worked best with single-test, huge, centered balls that fill the image.
  
-
+# References
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2Njg5NzUzLDg2OTQ4NDEzLDEwNTQ5Mj
-k2NDcsMTAxOTkwMjU3NCwxOTg0MzAwODkxLC0yNjUyOTM1NTQs
-LTEyMDQ2MTE1MDIsLTQwMjcyNTc4NCwtMTg1NDgwODY3MywxMD
-AxMjk4ODYzLC0xMzkwMTcxMzg3LC0yMDEwMDcwMDI4LC0xMTky
-NzY3ODAsMzY3MDA4OTE2LDEzNzExMTI4OTEsMTAxMzk2ODMxMS
-wyNzYzMDk4NTUsLTQ4Mzk4Mzg3NiwtMTcyMTQwNzk1NCwzNjA1
-MDY1NjNdfQ==
+eyJoaXN0b3J5IjpbLTk3MDIzMzI2NCwxNTY2ODk3NTMsODY5ND
+g0MTMsMTA1NDkyOTY0NywxMDE5OTAyNTc0LDE5ODQzMDA4OTEs
+LTI2NTI5MzU1NCwtMTIwNDYxMTUwMiwtNDAyNzI1Nzg0LC0xOD
+U0ODA4NjczLDEwMDEyOTg4NjMsLTEzOTAxNzEzODcsLTIwMTAw
+NzAwMjgsLTExOTI3Njc4MCwzNjcwMDg5MTYsMTM3MTExMjg5MS
+wxMDEzOTY4MzExLDI3NjMwOTg1NSwtNDgzOTgzODc2LC0xNzIx
+NDA3OTU0XX0=
 -->
