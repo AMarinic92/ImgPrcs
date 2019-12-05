@@ -31,7 +31,7 @@ In order to determine if an image contains a ball or not we need to determine wh
 |Soccer-Ball-1.pgm [3]|Ball | Large, noisey inside and outside, takes up majority of image |
 | Rubber-Ball-7.pgm [4]	| Ball              	| Image is all balls, All balls are the same, All balls have clean edges                                       	|
 | Golf-Ball-1.pgm   [5]	| Ball              	| Surrounded y lots of noise, Ball dose not blend into noise                                                   	|
-| Basketball-1.pgm  	| Ball              	| Large ball, off centre, texture in ball, noise in image                                                 	|
+| Basketball-1.pgm [6] 	| Ball              	| Large ball, off centre, texture in ball, noise in image                                                 	|
 | Globe.pgm         	| Sphere(not ball)  	| Computer generated image like library, sphere but not a ball, reflection, most like a ball without being one 	|
 | Sunflower.pgm     	| Circular symmetry 	| Symmetry is round but edges are not close to round                                                           	|
 | CD-ROM.pgm        	| Circular symmetry 	| Perfect circle, Circle in circle, little noise                                                               	|
@@ -53,11 +53,11 @@ Like the weighed calcD, this method has its advantages and drawbacks. Calculatin
 4. Kratochvil Petr (2019), *Colorful Play Balls*.[https://www.publicdomainpictures.net/pictures/30000/velka/colorful-play-balls.jpg](https://www.publicdomainpictures.net/pictures/30000/velka/colorful-play-balls.jpg)
 5.  Brennan Paul (2019) *Golf Ball On Putting Green*. [https://publicdomainpictures.net/pictures/130000/velka/golf-ball-on-putting-green.jpg](https://publicdomainpictures.net/pictures/130000/velka/golf-ball-on-putting-green.jpg)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNDA1NzY5NzcsMTk4NzMzNDYwOSwxNT
-Y2ODk3NTMsODY5NDg0MTMsMTA1NDkyOTY0NywxMDE5OTAyNTc0
-LDE5ODQzMDA4OTEsLTI2NTI5MzU1NCwtMTIwNDYxMTUwMiwtND
-AyNzI1Nzg0LC0xODU0ODA4NjczLDEwMDEyOTg4NjMsLTEzOTAx
-NzEzODcsLTIwMTAwNzAwMjgsLTExOTI3Njc4MCwzNjcwMDg5MT
-YsMTM3MTExMjg5MSwxMDEzOTY4MzExLDI3NjMwOTg1NSwtNDgz
-OTgzODc2XX0=
+eyJoaXN0b3J5IjpbLTg5NzU5ODA5MSwxOTg3MzM0NjA5LDE1Nj
+Y4OTc1Myw4Njk0ODQxMywxMDU0OTI5NjQ3LDEwMTk5MDI1NzQs
+MTk4NDMwMDg5MSwtMjY1MjkzNTU0LC0xMjA0NjExNTAyLC00MD
+I3MjU3ODQsLTE4NTQ4MDg2NzMsMTAwMTI5ODg2MywtMTM5MDE3
+MTM4NywtMjAxMDA3MDAyOCwtMTE5Mjc2NzgwLDM2NzAwODkxNi
+wxMzcxMTEyODkxLDEwMTM5NjgzMTEsMjc2MzA5ODU1LC00ODM5
+ODM4NzZdfQ==
 -->
