@@ -12,7 +12,7 @@ Our hypothesis is as follows. If we reduce an image down to its edges with the u
 <p>We will then test each slice against each individual image in our reference library. Performing these two tests will allow for us to see how much our image varies from our reference library and if it is an acceptable ball(based on the computed distance), and at the same time find which image in the library it is closest to. The reference images are named after the radius of the circle in the image allowing for us to estimate the balls approximate pixel radius. This allows us to extend the application to testing the maze cell for infected organelles vs non infected organelles, as we would need to pass a reference of healthy vs non healthy regions of the cell and compare how different from each of the libraries it is so we can associate the region as healthy or infected. Our ball application is essentially the same with "has a ball" and "does not have a ball" as our replacements for healthy and unhealthy. </p>
 
 ## Methodology 
-<p>Running the `runTrials.py` *(Andrew)* starts an experiment to test an ascii PMG file. Each of these experiments is organised into a folder where the uncanny edge detection of the test image and folders containing test libraries is held. This helps keep our trials separate and makes iteration over the libraries easy. `runTrials.py` also handles scanning over the test image. Initially we started our trials by testing the entire image against the eigen-matrix of a library with images of equal size. The issue of computing power became rapidly apparent with certain images. This method was abandoned with this logic to justify it; the largest ball in a rectangular image that is retained within said image has a max radius of the smallest dimension (producing the largest square that can be embedded in the rectangle). Instead of our initial trial testing the image as a whole we will immediately begin by scanning the image. This allowed for smaller initial comparisons, reducing strain on hardware and time required for calculations. 
+Running the `runTrials.py` *(Andrew)* starts an experiment to test an ascii PMG file. Each of these experiments is organised into a folder where the uncanny edge detection of the test image and folders containing test libraries is held. This helps keep our trials separate and makes iteration over the libraries easy. `runTrials.py` also handles scanning over the test image. Initially we started our trials by testing the entire image against the eigen-matrix of a library with images of equal size. The issue of computing power became rapidly apparent with certain images. This method was abandoned with this logic to justify it; the largest ball in a rectangular image that is retained within said image has a max radius of the smallest dimension (producing the largest square that can be embedded in the rectangle). Instead of our initial trial testing the image as a whole we will immediately begin by scanning the image. This allowed for smaller initial comparisons, reducing strain on hardware and time required for calculations. 
 
 Using `uncannyEdge`*(Andrea)* detection is essential for this project. The uncanny process requires a Gaussian blur, it is followed by applying a convolution of a kernel which compares adjacent pixels for likeness to determine an edge, as areas of uniform colour tend not to be edges. The edge is further refined by comparing the edge in an appropriate angle, either horizontally, vertically, or with slope 1 or -1. This will help thin the edge, we then finish off the process by suppressing noise which ignores weak pixels. This is allows us to have the most defining aspects of the images for comparison.*[Vaughan, 12]*
 
@@ -67,11 +67,11 @@ Like the weighed calcD, this method has its advantages and drawbacks. Calculatin
 13.  Vaughan, Jennifer. “Section 5: Facial Recognition” Science 2000: Image Processing, Oct 16- 31? 2019, U Manitoba, Winnipeg.
 14. Vaughan, Jennifer. *GenerateFaces.py*. Winnipeg, 2019
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyOTMyODkxNzUsLTIwNTk4NjU3ODAsLT
-EzNzMwMzE5MTEsLTEyNzIzMDExODUsLTY2NTM3MDM0NSwxOTg3
-MzM0NjA5LDE1NjY4OTc1Myw4Njk0ODQxMywxMDU0OTI5NjQ3LD
-EwMTk5MDI1NzQsMTk4NDMwMDg5MSwtMjY1MjkzNTU0LC0xMjA0
-NjExNTAyLC00MDI3MjU3ODQsLTE4NTQ4MDg2NzMsMTAwMTI5OD
-g2MywtMTM5MDE3MTM4NywtMjAxMDA3MDAyOCwtMTE5Mjc2Nzgw
-LDM2NzAwODkxNl19
+eyJoaXN0b3J5IjpbOTA3NTk5MTg1LC0yMDU5ODY1NzgwLC0xMz
+czMDMxOTExLC0xMjcyMzAxMTg1LC02NjUzNzAzNDUsMTk4NzMz
+NDYwOSwxNTY2ODk3NTMsODY5NDg0MTMsMTA1NDkyOTY0NywxMD
+E5OTAyNTc0LDE5ODQzMDA4OTEsLTI2NTI5MzU1NCwtMTIwNDYx
+MTUwMiwtNDAyNzI1Nzg0LC0xODU0ODA4NjczLDEwMDEyOTg4Nj
+MsLTEzOTAxNzEzODcsLTIwMTAwNzAwMjgsLTExOTI3Njc4MCwz
+NjcwMDg5MTZdfQ==
 -->
