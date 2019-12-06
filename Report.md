@@ -45,12 +45,11 @@ Calculating the difference between the input image and both the eigen-matrix of 
 
 `runTrials.py` also is responsible for scanning our image. The script asks for an input of trials to be run. Each trial after the first treats the test image as a sub-matrix of the whole image and changes its position effectively scanning the test image with a smaller square each time. One issue which can occur during scanning is how large of increments are taken. If a ball is found you may scan the same area counting multiple regions as containing balls when in reality it may be the same ball. If a ball is detected in a region it may prove to be effective to jump a large span in the scan to prevent this. Alternatively it may also be effective to compare d-values (difference of edges) of adjacent slices to see which is closest to our thresholds of what is and is not a ball. 
 
-
 Apart from getting the weighted distances, we would want to derive a test image's distance from each individual library image as well. For that, we implemented a `calcD_all` *(Andrea)* function, which gathers all the images in a library directory, and calls `calcD_single` *(Andrea)* to test the test slice against each library image. If one of tests return a passing score of above 80 percent, the function attests that ball is found. If all of the tests fail, the function will attest that there is no ball in the slice. In general, `calcD_single` assesses the percentage of the completion of a circle. Where a pixel in the library image is found, the test image is tested for a pixel in the same region and if it exceeds the cut-off for what would be considered an edge in pixel value, it becomes valid point in the circumference and the test score is increased.
 
 We use a second library generator to aid the processing of calcD_all called find_radii *(Andrea)*. This function gets the approximate locations of circles in an image and generates a library of images to hypothetically match that circle. The function probes across a horizontal strip from the centre edge to the centre or a vertical strip from the top edge to the centre and searches for relatively whiter pixels which could signal the edge of a ball. The function then calls another version of makeCircle *(Andrea)*. Given the dimensions of a test array, the function calculates the centre and for every half degree, plots a white point to form the outline of the circle.
 
-Like the weighed calcD, this method has its advantages and drawbacks. Calculating individual distances is a relatively quick method, and is very efficient if the test images has minimal detail and noise. The algorithm has the ability to bypass some faint background noise and noisy central details. However, some test images may still contain more bright noise which will generate a lot of library image files that consume space. Number of comparisons between test image and library images increase and will take more time. A major drawback of this method that the success of this function is extremely dependent on library circles being plotted very close to the size and position of the round object's edges in the test image. We remediated the function by allowing "zeroed-on" pixels to also test its neighbours. Circles that are considerably off-centre when a slice is taken will prove to be a problem. As only hypothetical, centred circles are drawn, assessing distances on other images may not be accurate and ball recognition may fail. The method worked best with single-test, huge, centred balls that fill the image.
+Like the weighed calcD, this method has its advantages and drawbacks. Calculating individual distances is a relatively quick method, and is very efficient if the test images has minimal detail and noise. The algorithm has the ability to bypass some faint background noise and noisy central details. However, some test images may still contain more bright noise which will generate a lot of library image files that consume space. Number of comparisons between test image and library images increase and will take more time. A major drawback of this method that the success of this function is extremely dependent on library circles being plotted very close to the size and position of the round object's edges in the test image. We needed to remediate the function by allowing "zeroed-on" pixels to also test its neighbours. Circles that are considerably off-centre when a slice is taken will prove to be a problem. As only hypothetical, centred circles are drawn, assessing distances on other images may not be accurate and ball recognition may fail. The method worked best with single-test, huge, centred balls that fill the image.
  
 # References
 1. Star Mark Andrew  (2019),  *Tennis Balls And Rackets*. [https://publicdomainpictures.net/pictures/230000/velka/palline-da-tennis-e-racchetta.jpg](https://publicdomainpictures.net/pictures/230000/velka/palline-da-tennis-e-racchetta.jpg)
@@ -68,11 +67,11 @@ Like the weighed calcD, this method has its advantages and drawbacks. Calculatin
 13.  Vaughan, Jennifer. “Section 5: Facial Recognition” Science 2000: Image Processing, Oct 16- 31? 2019, U Manitoba, Winnipeg.
 14. Vaughan, Jennifer. *GenerateFaces.py*. Winnipeg, 2019
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjkzNjYxNzYzLC0yMDU5ODY1NzgwLC0xMz
-czMDMxOTExLC0xMjcyMzAxMTg1LC02NjUzNzAzNDUsMTk4NzMz
-NDYwOSwxNTY2ODk3NTMsODY5NDg0MTMsMTA1NDkyOTY0NywxMD
-E5OTAyNTc0LDE5ODQzMDA4OTEsLTI2NTI5MzU1NCwtMTIwNDYx
-MTUwMiwtNDAyNzI1Nzg0LC0xODU0ODA4NjczLDEwMDEyOTg4Nj
-MsLTEzOTAxNzEzODcsLTIwMTAwNzAwMjgsLTExOTI3Njc4MCwz
-NjcwMDg5MTZdfQ==
+eyJoaXN0b3J5IjpbMTIwMzgwOTUyMSwtMjA1OTg2NTc4MCwtMT
+M3MzAzMTkxMSwtMTI3MjMwMTE4NSwtNjY1MzcwMzQ1LDE5ODcz
+MzQ2MDksMTU2Njg5NzUzLDg2OTQ4NDEzLDEwNTQ5Mjk2NDcsMT
+AxOTkwMjU3NCwxOTg0MzAwODkxLC0yNjUyOTM1NTQsLTEyMDQ2
+MTE1MDIsLTQwMjcyNTc4NCwtMTg1NDgwODY3MywxMDAxMjk4OD
+YzLC0xMzkwMTcxMzg3LC0yMDEwMDcwMDI4LC0xMTkyNzY3ODAs
+MzY3MDA4OTE2XX0=
 -->
