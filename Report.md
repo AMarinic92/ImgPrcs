@@ -51,10 +51,10 @@ We use a second library generator to aid the processing of `calcD_all` called `f
 
 Like the weighed calcD, this method has its advantages and drawbacks. Calculating individual distances is a relatively quick method, and is very efficient if the test images has minimal detail and noise. The algorithm has the ability to bypass some faint background noise and noisy central details. However, some test images may still contain more bright noise which will generate a lot of library image files that consume space. Number of comparisons between test image and library images increase and will take more time. A major drawback of this method that the success of this function is extremely dependent on library circles being plotted very close to the size and position of the round object's edges in the test image. We mediated the function by allowing "zeroed-on" pixels to also test its neighbours. Circles that are considerably off-centre when a slice is taken will prove to be a problem. As only hypothetical, centred circles are drawn, assessing distances on other images may not be accurate and ball recognition may fail. The method worked best with single-test, huge, centred balls that fill the image.
 
-Finally `CalcD` was modified to make `adv_calcD` *(Andrew)* to allow the library to be non-standardised (different sized images) and the test image to be different from the libraries. It simply uses some helper methods to centre and pad images with black space to allow them to be test a liked. This proved to give heavily inconsistent results amongst tests.  This is probably do to the large black space created in smaller test images. It was tested with the maze mosaic virus to little  to no success.
+Finally `CalcD` was modified to make `adv_calcD` *(Andrew)* to allow the library to be non-standardised (different sized images) and the test image to be different from the libraries. It simply uses some helper methods to centre and pad images with black space to allow them to be test a liked. This proved to give heavily inconsistent results amongst tests.  This is probably do to the large black space created in smaller test images. It was tested with the maze mosaic virus to little  to no success. Though this could be attributed to the mess that uncanny edge detection leaves the cells. 
 
 ## Conclusion
-The use of a method similar to the facial recognition *[Vaughan, 13]* system shown in class though interesting, but shows little validity in a real world application for other image recognition methods.  Even with a computer generated library the ability to avoid image bias in our library was difficult. This was apparent when the same methods were used with the `adv_calcD` as it was tuned for balls and tested with maize mosaic virus, it was rapidly apparent that 
+The use of a method similar to the facial recognition *[Vaughan, 13]* system shown in class though interesting, but shows little validity in a real world application for other image recognition methods.  Even with a computer generated library the ability to avoid image bias in our library was difficult. This was apparent when the same methods were used with the `adv_calcD` as it was tuned for balls and tested with maize mosaic virus, it was rapidly apparent that the system of calculating the differences between two images has its limitations. 
  
 # References
 1. Star Mark Andrew  (2019),  *Tennis Balls And Rackets*. [https://publicdomainpictures.net/pictures/230000/velka/palline-da-tennis-e-racchetta.jpg](https://publicdomainpictures.net/pictures/230000/velka/palline-da-tennis-e-racchetta.jpg)
@@ -72,7 +72,7 @@ The use of a method similar to the facial recognition *[Vaughan, 13]* system sho
 13.  Vaughan, Jennifer. “Section 5: Facial Recognition” Science 2000: Image Processing, Oct 16- 31? 2019, U Manitoba, Winnipeg.
 14. Vaughan, Jennifer. *GenerateFaces.py*. Winnipeg, 2019
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0OTk2Njg2NjEsLTIwNTk4NjU3ODAsLT
+eyJoaXN0b3J5IjpbLTE2ODYzMTgwMjcsLTIwNTk4NjU3ODAsLT
 EzNzMwMzE5MTEsLTEyNzIzMDExODUsLTY2NTM3MDM0NSwxOTg3
 MzM0NjA5LDE1NjY4OTc1Myw4Njk0ODQxMywxMDU0OTI5NjQ3LD
 EwMTk5MDI1NzQsMTk4NDMwMDg5MSwtMjY1MjkzNTU0LC0xMjA0
