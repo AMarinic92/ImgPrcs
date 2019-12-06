@@ -54,7 +54,7 @@ Like the weighed calcD, this method has its advantages and drawbacks. Calculatin
 Finally `CalcD` was modified to make `adv_calcD` *(Andrew)* to allow the library to be non-standardised (different sized images) and the test image to be different from the libraries. It simply uses some helper methods to centre and pad images with black space to allow them to be test a liked. This proved to give heavily inconsistent results amongst tests.  This is probably do to the large black space created in smaller test images. It was tested with the maze mosaic virus to little  to no success.
 
 ## Conclusion
-The use of a method similar to the facial recognition sys 
+The use of a method similar to the facial recognition system shown in class is interesting, but shows little validity in a real world application for other image recognition methods.  Even with a computer generated library the ability to avoid image bias in our library was difficult. This was apparent when the same methods were used with the adv_calcD
  
 # References
 1. Star Mark Andrew  (2019),  *Tennis Balls And Rackets*. [https://publicdomainpictures.net/pictures/230000/velka/palline-da-tennis-e-racchetta.jpg](https://publicdomainpictures.net/pictures/230000/velka/palline-da-tennis-e-racchetta.jpg)
@@ -72,7 +72,7 @@ The use of a method similar to the facial recognition sys
 13.  Vaughan, Jennifer. “Section 5: Facial Recognition” Science 2000: Image Processing, Oct 16- 31? 2019, U Manitoba, Winnipeg.
 14. Vaughan, Jennifer. *GenerateFaces.py*. Winnipeg, 2019
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY0ODk0Njc4NiwtMjA1OTg2NTc4MCwtMT
+eyJoaXN0b3J5IjpbLTUzMTQzOTQ0OSwtMjA1OTg2NTc4MCwtMT
 M3MzAzMTkxMSwtMTI3MjMwMTE4NSwtNjY1MzcwMzQ1LDE5ODcz
 MzQ2MDksMTU2Njg5NzUzLDg2OTQ4NDEzLDEwNTQ5Mjk2NDcsMT
 AxOTkwMjU3NCwxOTg0MzAwODkxLC0yNjUyOTM1NTQsLTEyMDQ2
