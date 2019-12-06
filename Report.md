@@ -51,7 +51,7 @@ We use a second library generator to aid the processing of `calcD_all` called `f
 
 Like the weighed calcD, this method has its advantages and drawbacks. Calculating individual distances is a relatively quick method, and is very efficient if the test images has minimal detail and noise. The algorithm has the ability to bypass some faint background noise and noisy central details. However, some test images may still contain more bright noise which will generate a lot of library image files that consume space. Number of comparisons between test image and library images increase and will take more time. A major drawback of this method that the success of this function is extremely dependent on library circles being plotted very close to the size and position of the round object's edges in the test image. We mediated the function by allowing "zeroed-on" pixels to also test its neighbours. Circles that are considerably off-centre when a slice is taken will prove to be a problem. As only hypothetical, centred circles are drawn, assessing distances on other images may not be accurate and ball recognition may fail. The method worked best with single-test, huge, centred balls that fill the image.
 
-Finally `CalcD` was modifed to make `adv_calcD` *(Andrew)* to allow the library to be non
+Finally `CalcD` was modified to make `adv_calcD` *(Andrew)* to allow the library to be non-standardised (different sized images) and the test image to be different from the libraries. It simply uses some helper methods to centre and pad images with black space to allow them to be test a liked. This proved to give heavily inconsistent results amongst tests.  This is probably do
  
 # References
 1. Star Mark Andrew  (2019),  *Tennis Balls And Rackets*. [https://publicdomainpictures.net/pictures/230000/velka/palline-da-tennis-e-racchetta.jpg](https://publicdomainpictures.net/pictures/230000/velka/palline-da-tennis-e-racchetta.jpg)
@@ -69,7 +69,7 @@ Finally `CalcD` was modifed to make `adv_calcD` *(Andrew)* to allow the library 
 13.  Vaughan, Jennifer. “Section 5: Facial Recognition” Science 2000: Image Processing, Oct 16- 31? 2019, U Manitoba, Winnipeg.
 14. Vaughan, Jennifer. *GenerateFaces.py*. Winnipeg, 2019
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjM1NTQ0NTYyLC0yMDU5ODY1NzgwLC0xMz
+eyJoaXN0b3J5IjpbNTE3ODIzMDUyLC0yMDU5ODY1NzgwLC0xMz
 czMDMxOTExLC0xMjcyMzAxMTg1LC02NjUzNzAzNDUsMTk4NzMz
 NDYwOSwxNTY2ODk3NTMsODY5NDg0MTMsMTA1NDkyOTY0NywxMD
 E5OTAyNTc0LDE5ODQzMDA4OTEsLTI2NTI5MzU1NCwtMTIwNDYx
