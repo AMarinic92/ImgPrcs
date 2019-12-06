@@ -24,12 +24,6 @@ One of method of generating our library is by the use of `makeCircle`*(Andrew)* 
 
  This library represents what a picture of a ball with no noise would be. A ball is a sphere and when projected into a 2 dimensional image we produce a circle no matter what angle the ball is taken at. This is not true for circular objects like a wheel, but is true for all spheres that are not balls like a globe. We will then pick a series of images the provided images to test against our computer generated library. Table 1 lists the justifications of trial images used for tuning the algorithm. We chose to compare images to an independent library instead of each other to try and prevent our library developing bias from selection of test images. This will help us tune the algorithm to before we start adding to it with balls we have confirmed from test images.
 
-Calculating the difference between the input image and both the eigen-matrix of the library and each image in it is how we are going to gather empirical evidence to prove or disprove our hypothesis. Using the tuning method above we should be able to 
-
-`runTrials.py` also is responsible for scanning our image. The script asks for an input of trials to be run. Each trial after the first treats the test image as a sub-matrix of the whole image and changes its position effectively scanning the test image with a smaller square each time. One issue which can occur during scanning is how large of increments are taken. If a ball is found you may scan the same area counting multiple regions as containing balls when in reality it may be the same ball. If a ball is detected in a region it may prove to be effective to jump a large span in the scan to prevent this. Alternatively it may also be effective to compare d-values (difference of edges) of adjacent slices to see which is closest to our thresholds of what is and is not a ball. 
-
-In order to determine if an image contains a ball or not we need to determine what is a ball and how is it different from other round objects. A series of p
-
 ## Table 1 - Tuning selection
 | Image Name *[ref]*        	| Type              	| Justifications                                                                                               	|
 |-------------------	|-------------------	|--------------------------------------------------------------------------------------------------------------	|
@@ -45,6 +39,11 @@ In order to determine if an image contains a ball or not we need to determine wh
 | Ferret.pgm        [10]	| Circular Symmetry 	| Circular symmetry, noisy symmetry like tennis ball                                                           	|
 | Bicycle.pgm    [11]   	| Circular Symmetry 	| Multiple circular objects, lots of noise in picture                                                          	|
 
+
+
+Calculating the difference between the input image and both the eigen-matrix of the library and each image in it is how we are going to gather empirical evidence to prove or disprove our hypothesis. Using the tuning method above we should be able to 
+
+`runTrials.py` also is responsible for scanning our image. The script asks for an input of trials to be run. Each trial after the first treats the test image as a sub-matrix of the whole image and changes its position effectively scanning the test image with a smaller square each time. One issue which can occur during scanning is how large of increments are taken. If a ball is found you may scan the same area counting multiple regions as containing balls when in reality it may be the same ball. If a ball is detected in a region it may prove to be effective to jump a large span in the scan to prevent this. Alternatively it may also be effective to compare d-values (difference of edges) of adjacent slices to see which is closest to our thresholds of what is and is not a ball. 
 
 
 Apart from getting the weighted distances, we would want to derive a test image's distance from each individual library image as well. For that, we implemented a `calcD_all` *(Andrea)* function, which gathers all the images in a library directory, and calls `calcD_single` *(Andrea)* to test the test slice against each library image. If one of tests return a passing score of above 80 percent, the function attests that ball is found. If all of the tests fail, the function will attest that there is no ball in the slice. In general, `calcD_single` assesses the percentage of the completion of a circle. Where a pixel in the library image is found, the test image is tested for a pixel in the same region and if it exceeds the cut-off for what would be considered an edge in pixel value, it becomes valid point in the circumference and the test score is increased.
@@ -69,11 +68,11 @@ Like the weighed calcD, this method has its advantages and drawbacks. Calculatin
 13.  Vaughan, Jennifer. “Section 5: Facial Recognition” Science 2000: Image Processing, Oct 16- 31? 2019, U Manitoba, Winnipeg.
 14. Vaughan, Jennifer. *GenerateFaces.py*. Winnipeg, 2019
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NjUyNjUzMjYsLTIwNTk4NjU3ODAsLT
-EzNzMwMzE5MTEsLTEyNzIzMDExODUsLTY2NTM3MDM0NSwxOTg3
-MzM0NjA5LDE1NjY4OTc1Myw4Njk0ODQxMywxMDU0OTI5NjQ3LD
-EwMTk5MDI1NzQsMTk4NDMwMDg5MSwtMjY1MjkzNTU0LC0xMjA0
-NjExNTAyLC00MDI3MjU3ODQsLTE4NTQ4MDg2NzMsMTAwMTI5OD
-g2MywtMTM5MDE3MTM4NywtMjAxMDA3MDAyOCwtMTE5Mjc2Nzgw
-LDM2NzAwODkxNl19
+eyJoaXN0b3J5IjpbNjkzNjYxNzYzLC0yMDU5ODY1NzgwLC0xMz
+czMDMxOTExLC0xMjcyMzAxMTg1LC02NjUzNzAzNDUsMTk4NzMz
+NDYwOSwxNTY2ODk3NTMsODY5NDg0MTMsMTA1NDkyOTY0NywxMD
+E5OTAyNTc0LDE5ODQzMDA4OTEsLTI2NTI5MzU1NCwtMTIwNDYx
+MTUwMiwtNDAyNzI1Nzg0LC0xODU0ODA4NjczLDEwMDEyOTg4Nj
+MsLTEzOTAxNzEzODcsLTIwMTAwNzAwMjgsLTExOTI3Njc4MCwz
+NjcwMDg5MTZdfQ==
 -->
