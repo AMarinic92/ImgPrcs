@@ -54,7 +54,7 @@ Like the weighed calcD, this method has its advantages and drawbacks. Calculatin
 Finally `CalcD` was modified to make `adv_calcD` *(Andrew)* to allow the library to be non-standardised (different sized images) and the test image to be different from the libraries. It simply uses some helper methods to centre and pad images with black space to allow them to be test a liked. This proved to give heavily inconsistent results amongst tests.  This is probably do to the large black space created in smaller test images. It was tested with the maze mosaic virus to little  to no success.
 
 ## Conclusion
-The use of a method similar to the facial recognition system shown in class is interesting, but shows little validity in a real world application for other image recognition methods.  Even with a computer generated library the ability to avoid image bias in our library was difficult. This was apparent when the same methods were used with the adv_calcD
+The use of a method similar to the facial recognition *[Vaughan, 13]* system shown in class though interesting, but shows little validity in a real world application for other image recognition methods.  Even with a computer generated library the ability to avoid image bias in our library was difficult. This was apparent when the same methods were used with the `adv_calcD` as it was tuned for balls and tested with maize mosaic virus, it was rapidly apparent that 
  
 # References
 1. Star Mark Andrew  (2019),  *Tennis Balls And Rackets*. [https://publicdomainpictures.net/pictures/230000/velka/palline-da-tennis-e-racchetta.jpg](https://publicdomainpictures.net/pictures/230000/velka/palline-da-tennis-e-racchetta.jpg)
@@ -72,11 +72,11 @@ The use of a method similar to the facial recognition system shown in class is i
 13.  Vaughan, Jennifer. “Section 5: Facial Recognition” Science 2000: Image Processing, Oct 16- 31? 2019, U Manitoba, Winnipeg.
 14. Vaughan, Jennifer. *GenerateFaces.py*. Winnipeg, 2019
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUzMTQzOTQ0OSwtMjA1OTg2NTc4MCwtMT
-M3MzAzMTkxMSwtMTI3MjMwMTE4NSwtNjY1MzcwMzQ1LDE5ODcz
-MzQ2MDksMTU2Njg5NzUzLDg2OTQ4NDEzLDEwNTQ5Mjk2NDcsMT
-AxOTkwMjU3NCwxOTg0MzAwODkxLC0yNjUyOTM1NTQsLTEyMDQ2
-MTE1MDIsLTQwMjcyNTc4NCwtMTg1NDgwODY3MywxMDAxMjk4OD
-YzLC0xMzkwMTcxMzg3LC0yMDEwMDcwMDI4LC0xMTkyNzY3ODAs
-MzY3MDA4OTE2XX0=
+eyJoaXN0b3J5IjpbLTE0OTk2Njg2NjEsLTIwNTk4NjU3ODAsLT
+EzNzMwMzE5MTEsLTEyNzIzMDExODUsLTY2NTM3MDM0NSwxOTg3
+MzM0NjA5LDE1NjY4OTc1Myw4Njk0ODQxMywxMDU0OTI5NjQ3LD
+EwMTk5MDI1NzQsMTk4NDMwMDg5MSwtMjY1MjkzNTU0LC0xMjA0
+NjExNTAyLC00MDI3MjU3ODQsLTE4NTQ4MDg2NzMsMTAwMTI5OD
+g2MywtMTM5MDE3MTM4NywtMjAxMDA3MDAyOCwtMTE5Mjc2Nzgw
+LDM2NzAwODkxNl19
 -->
