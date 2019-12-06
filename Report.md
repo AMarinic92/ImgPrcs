@@ -1,6 +1,6 @@
 # Image Recognition: Andrea Abellera and Andrew Marinic
  ## Introduction
-<p>	The goal of our project is to create an image recognition program. The objective of the program is to recognize the balls from a variety of image samples, some which contains balls and others containing round objects that are not balls. These known objects can be used to help us refine our search. </p>
+<p>The goal of our project is to create an image recognition program. The objective of the program is to recognize the balls from a variety of image samples, some which contains balls and others containing round objects that are not balls. These known objects can be used to help us refine our search. </p>
 	 <p>	The algorithm  will use the uncanny edge detection to reduce our test image to its edges. The number of trials can be modified to help refine the search. A single trial would search the image as a whole, and then each subsequent trial would scan the trial image in smaller slices to help identify smaller balls, multiple balls, and off centre balls. An algorithm was used to calculate the covariance matrix of the image library, derive weights from the library images and from the test image or slice, then use these to find the distance of a test image or slice from a ball. We then perform a second test with the same goal of recognising the balls from the samples, but instead of derving weights, we compare the difference between each individual library image to the test image to see if we have a good match to any of our library images. The stretch goal would be to extend this methodology to track the progress of the maze mosaic virus in a plant cell. Throughout the report it will be mentioned how certain functions were coded with this in mind.</p> 
 
 ## Hypothesis
@@ -62,11 +62,11 @@ Like the weighed calcD, this method has its advantages and drawbacks. Calculatin
 13.  Vaughan, Jennifer. “Section 5: Facial Recognition” Science 2000: Image Processing, Oct 16- 31? 2019, U Manitoba, Winnipeg.
 14. Vaughan, Jennifer. *GenerateFaces.py*. Winnipeg, 2019
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNzMwMzE5MTEsLTEyNzIzMDExODUsLT
-Y2NTM3MDM0NSwxOTg3MzM0NjA5LDE1NjY4OTc1Myw4Njk0ODQx
-MywxMDU0OTI5NjQ3LDEwMTk5MDI1NzQsMTk4NDMwMDg5MSwtMj
-Y1MjkzNTU0LC0xMjA0NjExNTAyLC00MDI3MjU3ODQsLTE4NTQ4
-MDg2NzMsMTAwMTI5ODg2MywtMTM5MDE3MTM4NywtMjAxMDA3MD
-AyOCwtMTE5Mjc2NzgwLDM2NzAwODkxNiwxMzcxMTEyODkxLDEw
-MTM5NjgzMTFdfQ==
+eyJoaXN0b3J5IjpbLTE1NjI2MzgzOTksLTEzNzMwMzE5MTEsLT
+EyNzIzMDExODUsLTY2NTM3MDM0NSwxOTg3MzM0NjA5LDE1NjY4
+OTc1Myw4Njk0ODQxMywxMDU0OTI5NjQ3LDEwMTk5MDI1NzQsMT
+k4NDMwMDg5MSwtMjY1MjkzNTU0LC0xMjA0NjExNTAyLC00MDI3
+MjU3ODQsLTE4NTQ4MDg2NzMsMTAwMTI5ODg2MywtMTM5MDE3MT
+M4NywtMjAxMDA3MDAyOCwtMTE5Mjc2NzgwLDM2NzAwODkxNiwx
+MzcxMTEyODkxXX0=
 -->
